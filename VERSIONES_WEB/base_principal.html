@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kalavia – Hamburguesería | Reus, Tarragona</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --black: #0a0a0a;
+      --deep: #111111;
+      --card: #181818;
+      --border: #2a2a2a;
+      --gold: #c9933a;
+      --gold-light: #e8b05a;
+      --red: #c0392b;
+      --white: #f5f0ea;
+      --muted: #888;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 4rem;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: padding 0.3s;
+    }
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 4px;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--white); }
+    nav ul { list-style: none; display: flex; gap: 2.5rem; }
+    nav ul li a {
+      text-decoration: none; color: var(--muted);
+      font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover { color: var(--gold); }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: grid; place-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 70% 50%, rgba(201,147,58,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 80%, rgba(192,57,43,0.06) 0%, transparent 50%),
+        var(--black);
+    }
+
+    /* animated grain */
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.3; pointer-events: none;
+    }
+
+    /* decorative lines */
+    #hero::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      border: 1px solid rgba(201,147,58,0.08);
+      box-shadow: 0 0 0 80px rgba(201,147,58,0.03), 0 0 0 160px rgba(201,147,58,0.015);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      text-align: center;
+      position: relative; z-index: 1;
+      animation: fadeUp 1s ease both;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.75rem; letter-spacing: 5px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.5rem;
+      display: flex; align-items: center; justify-content: center; gap: 1rem;
+    }
+    .hero-eyebrow::before, .hero-eyebrow::after {
+      content: ''; width: 40px; height: 1px; background: var(--gold); opacity: 0.5;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(5rem, 14vw, 13rem);
+      line-height: 0.9;
+      letter-spacing: 2px;
+      color: var(--white);
+    }
+    h1 .accent { color: var(--gold); }
+
+    .hero-sub {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    .hero-cta {
+      margin-top: 3rem;
+      display: flex; gap: 1rem; justify-content: center;
+    }
+
+    .btn {
+      padding: 0.9rem 2.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: all 0.3s;
+    }
+    .btn-primary {
+      background: var(--gold); color: var(--black); font-weight: 600;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent; color: var(--white);
+      border: 1px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+    .scroll-hint {
+      position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      color: var(--muted); font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase;
+      animation: bounce 2s ease infinite;
+    }
+    .scroll-hint::after {
+      content: ''; width: 1px; height: 50px; background: linear-gradient(to bottom, var(--gold), transparent);
+    }
+
+    /* ── SECTION BASE ── */
+    section { padding: 8rem 4rem; }
+    .section-tag {
+      font-size: 0.7rem; letter-spacing: 5px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+    .section-line {
+      width: 60px; height: 2px;
+      background: linear-gradient(to right, var(--gold), transparent);
+      margin-bottom: 3rem;
+    }
+
+    /* ── ABOUT ── */
+    #sobre {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+      max-width: 1400px; margin: 0 auto;
+      padding: 8rem 4rem;
+    }
+
+    .about-text p {
+      color: var(--muted); line-height: 1.9; font-size: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    .about-text p strong { color: var(--white); font-weight: 500; }
+
+    .about-visual {
+      position: relative;
+    }
+    .about-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: linear-gradient(to right, var(--gold), var(--red));
+    }
+    .about-card::after {
+      content: '"';
+      position: absolute; bottom: -1rem; right: 1.5rem;
+      font-size: 12rem; color: rgba(201,147,58,0.04);
+      font-family: 'Playfair Display', serif; line-height: 1;
+    }
+    .about-quote {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.4rem;
+      line-height: 1.6;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+    .about-quote-author {
+      font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .stat-row {
+      display: flex; gap: 2rem; margin-top: 3rem;
+    }
+    .stat { flex: 1; border-left: 2px solid var(--gold); padding-left: 1rem; }
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem; color: var(--gold); line-height: 1;
+    }
+    .stat-label { font-size: 0.75rem; color: var(--muted); letter-spacing: 1px; margin-top: 0.3rem; }
+
+    /* ── MENU ── */
+    #menu { background: var(--deep); }
+    .menu-inner { max-width: 1400px; margin: 0 auto; }
+
+    .menu-header { margin-bottom: 4rem; }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: var(--border);
+    }
+
+    .menu-item {
+      background: var(--card);
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s;
+      cursor: default;
+    }
+    .menu-item:hover {
+      background: #1e1e1e;
+      transform: scale(1.01);
+      z-index: 2;
+    }
+    .menu-item::before {
+      content: '';
+      position: absolute; bottom: 0; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(to right, var(--gold), var(--red));
+      transition: width 0.4s;
+    }
+    .menu-item:hover::before { width: 100%; }
+
+    .menu-item-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4rem; color: rgba(201,147,58,0.08);
+      position: absolute; top: 1rem; right: 1.5rem;
+      line-height: 1; transition: color 0.4s;
+    }
+    .menu-item:hover .menu-item-number { color: rgba(201,147,58,0.15); }
+
+    .menu-badge {
+      display: inline-block;
+      font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold); border: 1px solid rgba(201,147,58,0.3);
+      padding: 0.2rem 0.6rem; margin-bottom: 1rem;
+    }
+    .menu-item-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem; letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+    .menu-item-desc {
+      font-size: 0.85rem; color: var(--muted); line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    .menu-item-price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem; color: var(--gold);
+    }
+    .menu-item-price span { font-family: 'DM Sans', sans-serif; font-size: 0.75rem; color: var(--muted); }
+
+    .menu-cta { margin-top: 3rem; text-align: center; }
+
+    /* ── GALLERY ── */
+    #galeria { max-width: 1400px; margin: 0 auto; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto;
+      gap: 8px;
+    }
+    .gallery-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 1;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .gallery-item.wide { grid-column: span 2; aspect-ratio: 2/1; }
+    .gallery-item.tall { grid-row: span 2; aspect-ratio: 1/2; }
+
+    .gallery-placeholder {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 1rem;
+      font-size: 3rem;
+      color: rgba(201,147,58,0.2);
+      transition: all 0.4s;
+    }
+    .gallery-item:hover .gallery-placeholder { color: rgba(201,147,58,0.5); transform: scale(1.05); }
+    .gallery-label {
+      font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--muted); font-family: 'DM Sans', sans-serif;
+    }
+
+    .gallery-overlay {
+      position: absolute; inset: 0;
+      background: rgba(10,10,10,0.7);
+      display: flex; align-items: flex-end; padding: 1.5rem;
+      opacity: 0; transition: opacity 0.4s;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-overlay-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem; letter-spacing: 2px; color: var(--gold);
+    }
+
+    /* ── CONTACT ── */
+    #contacto { background: var(--deep); }
+    .contact-inner {
+      max-width: 1400px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 6rem; align-items: start;
+    }
+
+    .contact-info-block {
+      display: flex; flex-direction: column; gap: 2rem;
+    }
+    .contact-detail {
+      display: flex; gap: 1.5rem; align-items: flex-start;
+    }
+    .contact-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; color: var(--gold);
+    }
+    .contact-detail-label {
+      font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.3rem;
+    }
+    .contact-detail-value {
+      font-size: 1rem; color: var(--white); line-height: 1.5;
+    }
+
+    .hours-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 2rem;
+      margin-top: 2rem;
+      padding: 2rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+    }
+    .hours-row { display: contents; }
+    .hours-day { font-size: 0.8rem; color: var(--muted); letter-spacing: 1px; }
+    .hours-time { font-size: 0.8rem; color: var(--white); text-align: right; }
+    .hours-sep { grid-column: 1/-1; height: 1px; background: var(--border); margin: 0.5rem 0; }
+
+    /* Map placeholder */
+    .map-placeholder {
+      background: var(--card);
+      border: 1px solid var(--border);
+      height: 350px;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 1rem;
+      position: relative; overflow: hidden;
+    }
+    .map-placeholder::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(rgba(201,147,58,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,147,58,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .map-pin { font-size: 3rem; animation: pulse 2s ease infinite; }
+    .map-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem; letter-spacing: 3px; color: var(--gold);
+    }
+    .map-addr { font-size: 0.8rem; color: var(--muted); text-align: center; }
+    .map-link {
+      margin-top: 1rem;
+      color: var(--gold); font-size: 0.75rem; letter-spacing: 2px;
+      text-transform: uppercase; text-decoration: none;
+      border-bottom: 1px solid rgba(201,147,58,0.3);
+      padding-bottom: 2px; transition: border-color 0.3s;
+    }
+    .map-link:hover { border-color: var(--gold); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 3rem 4rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem; letter-spacing: 4px; color: var(--gold);
+    }
+    .footer-copy { font-size: 0.75rem; color: var(--muted); }
+    .footer-social { display: flex; gap: 1rem; }
+    .social-btn {
+      width: 38px; height: 38px;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted); text-decoration: none; font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+    .social-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      nav ul { gap: 1.2rem; }
+      section { padding: 5rem 1.5rem; }
+      #sobre { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 1.5rem; }
+      .menu-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-item.wide { grid-column: span 2; }
+      .gallery-item.tall { grid-row: span 1; aspect-ratio: 1; }
+      .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+      footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">KA<span>LAVIA</span></a>
+  <ul>
+    <li><a href="#sobre">Nosotros</a></li>
+    <li><a href="#menu">Menú</a></li>
+    <li><a href="#galeria">Galería</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Hamburguesería — Reus, Tarragona</div>
+    <h1>KA<span class="accent">LA</span>VIA</h1>
+    <p class="hero-sub">Donde cada bocado cuenta una historia</p>
+    <div class="hero-cta">
+      <a href="#menu" class="btn btn-primary">Ver Carta</a>
+      <a href="#contacto" class="btn btn-outline">Encontrarnos</a>
+    </div>
+  </div>
+  <div class="scroll-hint">Descubrir</div>
+</section>
+
+<!-- SOBRE NOSOTROS -->
+<div id="sobre">
+  <div class="about-text">
+    <p class="section-tag">Nuestra historia</p>
+    <h2 class="section-title">Más que una<br>hamburguesa</h2>
+    <div class="section-line"></div>
+    <p>
+      En <strong>Kalavia</strong> creemos que una buena hamburguesa es mucho más que ingredientes apilados. Es una experiencia, un ritual, una razón para reunirse. Nacimos en el corazón de <strong>Reus</strong> con la misión de elevar la comida callejera a otro nivel.
+    </p>
+    <p>
+      Cada burger que sale de nuestra cocina lleva detrás horas de trabajo: el pan brioche horneado diariamente, la carne seleccionada con mimo, las salsas elaboradas en casa. <strong>Sin atajos. Sin compromisos.</strong>
+    </p>
+    <p>
+      Somos la hamburguesería de referencia en la comarca del Camp de Tarragona porque ponemos el mismo amor en cada plato, ya sea el primero del día o el último.
+    </p>
+    <div class="stat-row reveal">
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Carne fresca</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">+50</div>
+        <div class="stat-label">Recetas únicas</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">★ 4.8</div>
+        <div class="stat-label">Valoración media</div>
+      </div>
+    </div>
+  </div>
+  <div class="about-visual reveal">
+    <div class="about-card">
+      <p class="about-quote">"El sabor de Kalavia es de esos que no se olvidan. Volvería cien veces más."</p>
+      <p class="about-quote-author">— Cliente habitual, Reus</p>
+    </div>
+  </div>
+</div>
+
+<!-- MENÚ -->
+<section id="menu">
+  <div class="menu-inner">
+    <div class="menu-header reveal">
+      <p class="section-tag">Nuestras especialidades</p>
+      <h2 class="section-title">La Carta</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item reveal">
+        <div class="menu-item-number">01</div>
+        <div class="menu-badge">Clásica</div>
+        <h3 class="menu-item-name">Kalavia Original</h3>
+        <p class="menu-item-desc">Brioche artesano, ternera 200g, queso Cheddar madurado, lechuga, tomate, cebolla caramelizada y nuestra salsa secreta.</p>
+        <div class="menu-item-price">10.90€ <span>/ unidad</span></div>
+      </div>
+      <div class="menu-item reveal">
+        <div class="menu-item-number">02</div>
+        <div class="menu-badge">Especial</div>
+        <h3 class="menu-item-name">Doble K</h3>
+        <p class="menu-item-desc">Doble medallón de ternera, doble queso Gouda, bacon crujiente, pepinillos y salsa BBQ ahumada. Para los valientes.</p>
+        <div class="menu-item-price">13.90€ <span>/ unidad</span></div>
+      </div>
+      <div class="menu-item reveal">
+        <div class="menu-item-number">03</div>
+        <div class="menu-badge">Nuevo</div>
+        <h3 class="menu-item-name">Trufa & Seta</h3>
+        <p class="menu-item-desc">Ternera premium, mayonesa de trufa negra, setas salteadas, rúcula fresca y parmesano rallado. Alta cocina en formato burger.</p>
+        <div class="menu-item-price">14.50€ <span>/ unidad</span></div>
+      </div>
+      <div class="menu-item reveal">
+        <div class="menu-item-number">04</div>
+        <div class="menu-badge">Veggie</div>
+        <h3 class="menu-item-name">Green Kalavia</h3>
+        <p class="menu-item-desc">Hamburguesa vegetal, aguacate cremoso, queso de cabra, brotes tiernos, tomate seco y vinagreta de limón.</p>
+        <div class="menu-item-price">11.50€ <span>/ unidad</span></div>
+      </div>
+      <div class="menu-item reveal">
+        <div class="menu-item-number">05</div>
+        <div class="menu-badge">Picante</div>
+        <h3 class="menu-item-name">Fuego Salvaje</h3>
+        <p class="menu-item-desc">Ternera especiada, jalapeños frescos, Pepper Jack, sriracha casera, cebolla roja encurtida. No apta para cobardes.</p>
+        <div class="menu-item-price">12.90€ <span>/ unidad</span></div>
+      </div>
+      <div class="menu-item reveal">
+        <div class="menu-item-number">06</div>
+        <div class="menu-badge">Combos</div>
+        <h3 class="menu-item-name">Menú Kalavia</h3>
+        <p class="menu-item-desc">Cualquier hamburguesa de la carta + patatas fritas artesanas + bebida a elegir. La experiencia completa.</p>
+        <div class="menu-item-price">Desde 14.90€ <span>/ combo</span></div>
+      </div>
+    </div>
+    <div class="menu-cta reveal">
+      <p style="color:var(--muted); font-size:0.85rem; margin-bottom:1.5rem;">Carta sujeta a disponibilidad de temporada. Pregúntanos por alérgenos.</p>
+      <a href="#contacto" class="btn btn-outline">Reservar Mesa</a>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section id="galeria">
+  <div class="reveal">
+    <p class="section-tag">Nuestra esencia</p>
+    <h2 class="section-title">Galería</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item wide reveal">
+      <div class="gallery-placeholder">🍔<span class="gallery-label">Kalavia Original</span></div>
+      <div class="gallery-overlay"><div class="gallery-overlay-text">La clásica perfecta</div></div>
+    </div>
+    <div class="gallery-item reveal">
+      <div class="gallery-placeholder">🥓<span class="gallery-label">Bacon artesano</span></div>
+      <div class="gallery-overlay"><div class="gallery-overlay-text">Ingredientes premium</div></div>
+    </div>
+    <div class="gallery-item reveal">
+      <div class="gallery-placeholder">🧀<span class="gallery-label">Quesos seleccionados</span></div>
+      <div class="gallery-overlay"><div class="gallery-overlay-text">Selección de quesos</div></div>
+    </div>
+    <div class="gallery-item reveal">
+      <div class="gallery-placeholder">🍟<span class="gallery-label">Patatas artesanas</span></div>
+      <div class="gallery-overlay"><div class="gallery-overlay-text">Patatas de verdad</div></div>
+    </div>
+    <div class="gallery-item reveal">
+      <div class="gallery-placeholder">🥩<span class="gallery-label">Carne fresca</span></div>
+      <div class="gallery-overlay"><div class="gallery-overlay-text">Carne 100% fresca</div></div>
+    </div>
+    <div class="gallery-item reveal">
+      <div class="gallery-placeholder">🍺<span class="gallery-label">Bebidas frías</span></div>
+      <div class="gallery-overlay"><div class="gallery-overlay-text">Para acompañar</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="contact-inner">
+    <div>
+      <p class="section-tag">Ven a visitarnos</p>
+      <h2 class="section-title">Encuéntranos</h2>
+      <div class="section-line"></div>
+      <div class="contact-info-block">
+        <div class="contact-detail reveal">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-detail-label">Dirección</div>
+            <div class="contact-detail-value">Reus, Tarragona<br>Camp de Tarragona</div>
+          </div>
+        </div>
+        <div class="contact-detail reveal">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-detail-label">Teléfono</div>
+            <div class="contact-detail-value">Pregúntanos en redes</div>
+          </div>
+        </div>
+        <div class="contact-detail reveal">
+          <div class="contact-icon">📱</div>
+          <div>
+            <div class="contact-detail-label">Redes Sociales</div>
+            <div class="contact-detail-value">@kalavia · Instagram & Facebook</div>
+          </div>
+        </div>
+      </div>
+      <div class="hours-grid reveal">
+        <div class="hours-day">Lunes – Miércoles</div><div class="hours-time">13:00 – 22:30</div>
+        <div class="hours-sep"></div>
+        <div class="hours-day">Jueves – Viernes</div><div class="hours-time">13:00 – 23:30</div>
+        <div class="hours-sep"></div>
+        <div class="hours-day">Sábado</div><div class="hours-time">12:00 – 23:30</div>
+        <div class="hours-sep"></div>
+        <div class="hours-day">Domingo</div><div class="hours-time">12:00 – 22:00</div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="map-placeholder">
+        <div class="map-pin">📍</div>
+        <div class="map-text">Kalavia — Reus</div>
+        <div class="map-addr">Reus, Tarragona<br>Camp de Tarragona, Catalunya</div>
+        <a href="https://maps.google.com/?q=Reus+Tarragona" target="_blank" class="map-link">Abrir en Google Maps →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">KALAVIA</div>
+  <div class="footer-copy">© 2025 Kalavia Hamburguesería · Reus, Tarragona</div>
+  <div class="footer-social">
+    <a href="#" class="social-btn" aria-label="Instagram">IG</a>
+    <a href="#" class="social-btn" aria-label="Facebook">FB</a>
+    <a href="#" class="social-btn" aria-label="TikTok">TK</a>
+  </div>
+</footer>
+
+<script>
+  // Intersection Observer for reveal animations
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Nav shrink on scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.padding = window.scrollY > 60 ? '0.8rem 4rem' : '1.2rem 4rem';
+  });
+</script>
+</body>
+</html>
