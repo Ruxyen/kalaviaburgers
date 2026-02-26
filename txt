@@ -3,3 +3,119 @@
 
 burgers Kalavia
 
+ <!-- RESERVAS -->
+  <section id="reservas" style="background:var(--black); padding:8rem 4rem;">
+    <div style="max-width:1000px; margin:0 auto;">
+      <div class="reveal" style="text-align:center; margin-bottom:3rem;">
+        <p class="section-tag" style="justify-content:center; display:flex; gap:1rem; align-items:center;">
+          <span style="width:40px;height:1px;background:var(--gold);opacity:.5;display:inline-block;"></span>
+          <span data-i18n="reservas_tag">Reserva tu mesa</span>
+          <span style="width:40px;height:1px;background:var(--gold);opacity:.5;display:inline-block;"></span>
+        </p>
+        <h2 class="section-title" data-i18n="reservas_title">Reservas</h2>
+        <div class="section-line" style="margin:0 auto 1rem;"></div>
+        <p style="color:var(--muted); font-size:0.9rem;"><span data-i18n="booking_sub">Elige fecha, hora y número de
+            comensales. Te esperamos.</span></p>
+      </div>
+
+      <div class="booking-widget reveal">
+        <!-- Step 1: Date -->
+        <div class="booking-step active" id="step1">
+          <div class="booking-step-label">
+            <span class="step-num">1</span>
+            <span data-i18n="booking_step1">Selecciona una fecha</span>
+          </div>
+          <div class="calendar-wrap">
+            <div class="cal-header">
+              <button class="cal-nav" id="prevMonth">&#8592;</button>
+              <span class="cal-month-label" id="calMonthLabel"></span>
+              <button class="cal-nav" id="nextMonth">&#8594;</button>
+            </div>
+            <div class="cal-days-header">
+              <span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span>
+            </div>
+            <div class="cal-grid" id="calGrid"></div>
+          </div>
+        </div>
+
+        <!-- Step 2: Time + Pax (shown after date selected) -->
+        <div class="booking-step" id="step2">
+          <div class="booking-step-label">
+            <span class="step-num">2</span>
+            <span data-i18n="booking_step2">Elige hora y comensales</span>
+          </div>
+          <div class="time-pax-grid">
+            <div>
+              <p class="booking-sublabel" data-i18n="book_hora">Hora</p>
+              <div class="time-slots" id="timeSlots"></div>
+            </div>
+            <div>
+              <p class="booking-sublabel" data-i18n="book_pax">Comensales</p>
+              <div class="pax-selector">
+                <button class="pax-btn" id="paxMinus">−</button>
+                <span class="pax-num" id="paxNum">2</span>
+                <button class="pax-btn" id="paxPlus">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Contact -->
+        <div class="booking-step" id="step3">
+          <div class="booking-step-label">
+            <span class="step-num">3</span>
+            <span data-i18n="booking_step3">Tus datos</span>
+          </div>
+          <div class="booking-form">
+            <div class="form-row">
+              <div class="form-field">
+                <label data-i18n="form_name">Nombre</label>
+                <input type="text" id="bookName" placeholder="Tu nombre" />
+              </div>
+              <div class="form-field">
+                <label data-i18n="form_phone">Teléfono</label>
+                <input type="tel" id="bookPhone" placeholder="+34 600 000 000" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label data-i18n="form_email">Email</label>
+              <input type="email" id="bookEmail" placeholder="tu@email.com" />
+            </div>
+            <div class="form-field">
+              <label data-i18n="form_notes">Notas adicionales (opcional)</label>
+              <textarea id="bookNotes" placeholder="Alergias, celebración especial..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary + CTA -->
+        <div class="booking-summary" id="bookingSummary">
+          <div class="summary-row" id="summaryDate" style="display:none">
+            <span class="summary-icon">📅</span>
+            <span id="summaryDateText"></span>
+          </div>
+          <div class="summary-row" id="summaryTime" style="display:none">
+            <span class="summary-icon">🕐</span>
+            <span id="summaryTimeText"></span>
+          </div>
+          <div class="summary-row" id="summaryPax" style="display:none">
+            <span class="summary-icon">👥</span>
+            <span id="summaryPaxText"></span>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top:2rem;">
+          <button class="btn btn-primary" id="confirmBtn" style="display:none; font-size:0.85rem; padding:1rem 3rem;"
+            onclick="confirmBooking()" data-i18n="confirmar_reserva">Confirmar Reserva</button>
+        </div>
+
+        <div class="booking-confirmed" id="bookingConfirmed">
+          <div class="confirmed-icon">✅</div>
+          <h3 class="confirmed-title" data-i18n="confirmed_title">¡Reserva confirmada!</h3>
+          <p class="confirmed-sub" data-i18n="confirmed_sub">Te esperamos en Kalavia. Recibirás un recordatorio.</p>
+          <button class="btn btn-outline" style="margin-top:1.5rem;" onclick="resetBooking()"
+            data-i18n="nueva_reserva">Nueva reserva</button>
+        </div>
+      </div>
+    </div>
+  </section>

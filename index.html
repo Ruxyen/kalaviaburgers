@@ -185,11 +185,6 @@
     }
 
 
-
-
-
-
-
     /* Lang switcher */
     .lang-switcher {
       display: flex;
@@ -350,7 +345,6 @@
     }
 
 
-
     h1 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(5rem, 15vw, 12rem);
@@ -417,16 +411,6 @@
   ═══════════════════════════════════════════════════ */
 
 
-
-
-
-
-
-
-
-
-
-
     .adm-logged #novAddBtn {
       display: none;
       text-align: center;
@@ -463,8 +447,6 @@
       color: var(--gold);
       display: block;
     }
-
-
 
 
     .about-quote::before {
@@ -512,11 +494,6 @@
     }
 
 
-
-
-
-
-
     .menu-tab .menu-panel {
       display: none !important;
     }
@@ -541,8 +518,6 @@
     .card.hidden {
       display: none;
     }
-
-
 
 
     .card-img-wrap img {
@@ -607,9 +582,6 @@
       line-height: 1.5;
       flex: 1;
     }
-
-
-
 
 
     /* Card back */
@@ -749,315 +721,7 @@
       color: #e05c4a;
     }
 
-    /* ═══════════════════════════════════════════════════
-     BOOKING / RESERVAS
-  ═══════════════════════════════════════════════════ */
-    #reservas {
-      padding: 8rem 4rem;
-      background: var(--black);
-    }
-
-    .booking-widget {
-      background: var(--card);
-      border: 1px solid var(--border);
-      padding: 2.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
-    }
-
-    .booking-step {
-      display: none;
-    }
-
-    .booking-step.active {
-      display: block;
-    }
-
-    .booking-step-label {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .step-num {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--gold);
-      color: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      font-weight: 800;
-      flex-shrink: 0;
-    }
-
-    .calendar-wrap {
-      max-width: 420px;
-      margin: 0 auto;
-    }
-
-    .cal-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 1rem;
-    }
-
-    .cal-month-label {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.3rem;
-      letter-spacing: 3px;
-      color: var(--white);
-    }
-
-    .cal- .cal-nav:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-    }
-
-    .cal-days-header {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      margin-bottom: 0.5rem;
-    }
-
-    .cal-days-header span {
-      text-align: center;
-      font-size: 0.62rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--muted);
-      padding: 0.3rem 0;
-    }
-
-    .cal-grid {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 3px;
-    }
-
-    .cal-day {
-      aspect-ratio: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.82rem;
-      cursor: pointer;
-      transition: all 0.15s;
-      border: 1px solid transparent;
-      color: var(--white);
-    }
-
-    .cal-day:hover:not(.empty):not(.past) {
-      border-color: var(--gold);
-      color: var(--gold);
-    }
-
-    .cal-day.today {
-      color: var(--gold);
-      font-weight: 700;
-    }
-
-    .cal-day.selected {
-      background: var(--gold);
-      color: #000 !important;
-      font-weight: 700;
-    }
-
-    .cal-day.past,
-    .cal-day.empty {
-      color: var(--border);
-      cursor: default;
-      pointer-events: none;
-    }
-
-    .cal-day.unavailable {
-      color: var(--border);
-      cursor: not-allowed;
-      text-decoration: line-through;
-    }
-
-    .time-pax-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-
-    .booking-sublabel {
-      font-size: 0.68rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.8rem;
-    }
-
-    .time-slots {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.4rem;
-    }
-
-    .time-slot {
-      border: 1px solid var(--border);
-      color: var(--white);
-      padding: 0.5rem;
-      font-size: 0.78rem;
-      text-align: center;
-      cursor: pointer;
-      background: transparent;
-      font-family: 'DM Sans', sans-serif;
-      transition: all 0.2s;
-    }
-
-    .time-slot:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-    }
-
-    .time-slot.selected {
-      background: var(--gold);
-      color: #000;
-      border-color: var(--gold);
-      font-weight: 700;
-    }
-
-    .time-slot.unavailable {
-      color: var(--border);
-      cursor: not-allowed;
-      text-decoration: line-through;
-    }
-
-    .pax-selector {
-      display: flex;
-      align-items: center;
-      gap: 1.2rem;
-    }
-
-    .pax-btn {
-      width: 36px;
-      height: 36px;
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--white);
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: 'DM Sans', sans-serif;
-    }
-
-    .pax-btn:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-    }
-
-    .pax-num {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2.2rem;
-      color: var(--gold);
-      min-width: 2ch;
-      text-align: center;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .form-field {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-
-    .form-field label {
-      font-size: 0.65rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .form-field input,
-    .form-field textarea,
-    .form-field select {
-      background: var(--deep);
-      border: 1px solid var(--border);
-      color: var(--white);
-      padding: 0.7rem 0.9rem;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.88rem;
-      outline: none;
-      transition: border-color 0.2s;
-      width: 100%;
-    }
-
-    .form-field input:focus,
-    .form-field textarea:focus {
-      border-color: var(--gold);
-    }
-
-    .form-field textarea {
-      resize: vertical;
-      min-height: 80px;
-    }
-
-    .booking-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .booking-summary {
-      border: 1px solid var(--border);
-      padding: 1.2rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-      background: rgba(201, 147, 58, 0.03);
-    }
-
-    .summary-row {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      font-size: 0.85rem;
-      color: var(--white);
-    }
-
-    .summary-icon {
-      font-size: 1rem;
-    }
-
-    .booking-confirmed {
-      display: none;
-      text-align: center;
-      padding: 3rem 2rem;
-    }
-
-    .booking-confirmed.show {
-      display: block;
-    }
-
-    .confirmed-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .confirmed-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2.2rem;
-      letter-spacing: 4px;
-      color: var(--gold);
-      margin-bottom: 0.5rem;
-    }
+    
 
     .confirmed-sub {
       color: var(--muted);
@@ -1074,14 +738,10 @@
     }
 
 
-
-
     .inf-track:active {
       cursor: grabbing;
       animation-play-state: paused;
     }
-
-
 
 
     /* Lightbox */
@@ -1089,11 +749,6 @@
     #lightbox.open {
       display: flex;
     }
-
-
-
-
-
 
 
     #lbImg {
@@ -1342,18 +997,9 @@
   ═══════════════════════════════════════════════════ */
 
 
-
     .location-card:hover {
       border-color: rgba(201, 147, 58, 0.4);
     }
-
-
-
-
-
-
-
-
 
 
     .adm-logged .adm-logged .contact-map-wrap {
@@ -1589,15 +1235,6 @@
   ═══════════════════════════════════════════════════ */
 
 
-
-
-
-
-
-
-
-
-
     .ampp-header {
       padding: 1.5rem 1.8rem;
       border-bottom: 1px solid var(--border);
@@ -1605,25 +1242,6 @@
       justify-content: space-between;
       align-items: center;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     .adm-section-toggle-row {
@@ -1820,13 +1438,6 @@
     }
 
 
-
-
-
-
-
-
-
     /* ── ABOUT (actual HTML classes) ── */
 
 
@@ -1846,14 +1457,6 @@
       height: 2px;
       background: linear-gradient(90deg, var(--gold), transparent);
     }
-
-
-
-
-
-
-
-
 
 
     .flag-svg {
@@ -1905,11 +1508,6 @@
     }
 
 
-
-
-
-
-
     /* ── REVIEW CARD extra classes ── */
     .review-header {
       display: flex;
@@ -1944,19 +1542,10 @@
     }
 
 
-
-
     /* ═══ MENU TABS - bigger, more visual ═══ */
 
 
-
-
-
-
-
-
     /* ═══ ALLERGEN BUTTON - more visual ═══ */
-
 
 
     /* ═══ CONTACT / VISITANOS - improved ═══ */
@@ -1976,23 +1565,10 @@
     }
 
 
-
-
     .contact-info-item:last-of-type {
       border-bottom: none;
       padding-bottom: 0;
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
     /* ═══ REVIEWS - rating summary visual ═══ */
@@ -2008,25 +1584,12 @@
     }
 
 
-
-
-
-
-
     .platform-badge:hover {
       border-color: rgba(201, 147, 58, 0.3);
     }
 
 
-
-
-
     /* ═══ ABOUT SECTION ═══ */
-
-
-
-
-
 
 
     .stat:last-child {
@@ -2036,8 +1599,6 @@
     .stat:hover {
       background: rgba(201, 147, 58, 0.06);
     }
-
-
 
 
     .about-card::before {
@@ -2051,13 +1612,7 @@
     }
 
 
-
     /* ═══ NOVEDADES ═══ */
-
-
-
-
-
 
 
     .nov-card:hover {
@@ -2073,24 +1628,15 @@
     }
 
 
-
-
-
-
-
-
     .adm-logged
     /* ════════════════════════════════════════
      ABOUT / NUESTRA HISTORIA
   ════════════════════════════════════════ */
 
 
-
     .about-text .section-tag {
       text-align: left;
     }
-
-
 
 
     .stat:last-child {
@@ -2100,7 +1646,6 @@
     .stat:hover {
       background: rgba(201, 147, 58, 0.07);
     }
-
 
 
     .about-card {
@@ -2120,7 +1665,6 @@
       height: 2px;
       background: linear-gradient(90deg, var(--gold), transparent);
     }
-
 
 
     /* ════════════════════════════════════════
@@ -2156,7 +1700,6 @@
     .nov-card:hover {
       border-color: rgba(201, 147, 58, 0.45);
     }
-
 
 
     .nov-card-tag {
@@ -2198,16 +1741,9 @@
   ════════════════════════════════════════ */
 
 
-
-
-
-
-
-
     /* ════════════════════════════════════════
      ALLERGEN BUTTON — visual gold style
   ════════════════════════════════════════ */
-
 
 
     /* ════════════════════════════════════════
@@ -2263,7 +1799,6 @@
     }
 
 
-
     .contact-info-item:last-of-type {
       border-bottom: none;
     }
@@ -2313,8 +1848,6 @@
     }
 
 
-
-
     .ht-closed {
       font-size: 0.75rem;
       color: rgba(224, 92, 74, 0.75);
@@ -2327,7 +1860,6 @@
       background: rgba(255, 255, 255, 0.05);
       margin: 0.15rem 0.8rem;
     }
-
 
 
     /* ════════════════════════════════════════
@@ -2445,7 +1977,6 @@
   ════════════════════════════════════════════════ */
 
     /* Password overlay — fullscreen, centered */
-
 
 
     .adm-box {
@@ -2650,9 +2181,6 @@
     }
 
 
-
-
-
     /* ════ ADMIN PANEL BODY ════ */
     .admp-body {
       padding: 1.5rem 0;
@@ -2842,19 +2370,6 @@
     }
 
     /* Admin edit modal fields */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     .adm-box-title {
@@ -3203,13 +2718,7 @@
     }
 
 
-
-
     /* Allergen btn — absolute bottom-right */
-
-
-
-
 
 
     /* ══ CONTACTO centered ══ */
@@ -3347,7 +2856,6 @@
       bottom: 1rem;
       left: 1.3rem;
     }
-
 
 
     /* ══ NAV RIGHT — always visible, pinned to right column ══ */
@@ -3791,12 +3299,7 @@
     }
 
 
-
-
     /* ═══ ALLERGEN BUTTON — bottom-right of card-front ═══ */
-
-
-
 
 
     /* Visitanos — address top margin */
@@ -3824,8 +3327,6 @@
         transform: scale(1.4);
       }
     }
-
-
 
 
     .hero-divider span:not(.hero-divider-icon) {
@@ -3866,8 +3367,6 @@
     }
 
     /* ═══ CARD FLIP SYSTEM — clean rebuild ═══ */
-
-
 
 
     .card-inner.flipped {
@@ -3953,8 +3452,6 @@
       background: var(--gold);
       border-color: var(--gold);
     }
-
-
 
 
     .contact-info-item:last-of-type {
@@ -4153,11 +3650,6 @@
     /* ═══ LIGHTBOX — arrows near image, close inset ═══ */
 
 
-
-
-
-
-
     /* ═══ HOURS TABLE — wider for long day names ═══ */
     .hours-table {
       width: 100%;
@@ -4236,10 +3728,6 @@
       background: rgba(12, 12, 12, 0.93) !important;
     }
 
-    #reservas {
-      background: rgba(8, 8, 8, 0.95) !important;
-    }
-
     #contacto {
       background: rgba(12, 12, 12, 0.93) !important;
     }
@@ -4257,19 +3745,11 @@
     }
 
 
-
     #hero {
       margin-top: -140px;
     }
 
     /* ═══ MENU TABS — bold, visual, clear active ═══ */
-
-
-
-
-
-
-
 
 
     /* Hero sub — decorative lines */
@@ -4344,13 +3824,8 @@
       justify-content: center;
     }
 
-    /* ═══ NAV RESERVE BTN — isolated hover ═══ */
-
-
-
 
     /* ═══ LIGHTBOX ═══ */
-
 
 
     .lb-content img {
@@ -4385,9 +3860,6 @@
     /* Arrows: sides of lb-wrap, not sides of viewport */
 
 
-
-
-
     .btn-ghost-pdf {
       display: inline-flex;
       align-items: center;
@@ -4417,7 +3889,6 @@
     #menu,
     #galeria,
     #novedades,
-    #reservas,
     #contacto,
     #resenas {
       position: relative;
@@ -4435,9 +3906,7 @@
         radial-gradient(ellipse at 30% 50%, rgba(201, 147, 58, 0.025) 0%, transparent 55%),
         radial-gradient(ellipse at 70% 50%, rgba(201, 147, 58, 0.018) 0%, transparent 55%);
     }
-
-    #menu::before,
-    #reservas::before {
+    #menu::before {
       content: '';
       position: absolute;
       inset: 0;
@@ -4449,40 +3918,9 @@
     #sobre>*,
     #novedades>*,
     #resenas>*,
-    #menu>*,
-    #reservas>* {
+    #menu>* {
       position: relative;
       z-index: 1;
-    }
-
-    /* Nav reserve btn — fully isolated hover */
-    .nav-reserve-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--gold);
-      color: #000;
-      text-decoration: none;
-      padding: 0.55rem 1.2rem;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.67rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      border: none;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: background 0.2s ease, box-shadow 0.2s ease;
-      border-radius: 1px;
-      will-change: background;
-      position: relative;
-      z-index: 1;
-      isolation: isolate;
-    }
-
-    .nav-reserve-btn:hover {
-      background: #d4a43a;
-      box-shadow: 0 0 18px rgba(201, 147, 58, 0.25);
     }
 
     /* ═══ LIGHTBOX ═══ */
@@ -4646,18 +4084,10 @@
     /* ═══ MENU TABS — bold visual with clear active ═══ */
 
 
-
-
-
-
-
-
     .menu-tab span:last-child {
       font-size: 0.72rem;
       letter-spacing: 2px;
     }
-
-
 
 
     /* ══════════════════════════════════════════════════════
@@ -4781,12 +4211,6 @@
 
       .nav-right {
         gap: 0.4rem;
-      }
-
-      .nav-reserve-btn {
-        padding: 0.4rem 0.65rem;
-        font-size: 0.58rem;
-        letter-spacing: 1.5px;
       }
 
       #navLogoCenter svg {
@@ -4992,20 +4416,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       /* Menu */
       .menu-inner {
         padding: 0 0.8rem;
@@ -5016,12 +4426,10 @@
       }
 
 
-
       .menu-tab span:last-child {
         font-size: 0.58rem;
         letter-spacing: 1.5px;
       }
-
 
 
       /* Gallery */
@@ -5046,19 +4454,6 @@
 
       #novedades {
         padding: 5rem 1rem;
-      }
-
-      /* Reservas */
-      #reservas {
-        padding: 4rem 1.2rem !important;
-      }
-
-      .booking-inner {
-        padding: 1.5rem;
-      }
-
-      .booking-step-label {
-        font-size: 0.7rem;
       }
 
       /* Contact / visitanos */
@@ -5097,18 +4492,6 @@
         grid-template-columns: 1fr !important;
         gap: 2rem;
         padding: 3rem 1.5rem !important;
-      }
-
-      /* Reserve modal */
-      #resModalStep2 {
-        width: 100vw !important;
-        height: 100vh !important;
-        max-width: 100% !important;
-        border-radius: 0;
-      }
-
-      #resModalStep1 {
-        width: 92vw !important;
       }
 
       /* Lightbox */
@@ -5305,7 +4688,6 @@ nav ul li a:hover {
     /* Admin overlay — reliable show/hide */
 
 
-
     /* ═══ MENU TABS — LARGE & CLEAR ═══ */
 
 
@@ -5336,7 +4718,6 @@ nav ul li a:hover {
     .card:hover {
       border-color: rgba(201, 147, 58, 0.4);
     }
-
 
 
     .card-inner {
@@ -5477,12 +4858,17 @@ nav ul li a:hover {
     }
 
     #adminOverlay {
-      display: none !important;
+      display: none;
     }
 
     #adminOverlay.vis {
-      display: flex !important;
+      display: flex;
     }
+
+    #navGearBtn { transition: opacity 0.2s, color 0.2s; }
+    #navGearIcon { transition: transform 0.6s cubic-bezier(.4,2,.6,1); }
+    .adm-logged #navGearBtn { opacity: 1 !important; }
+    .adm-logged #navGearIcon { transform: rotate(180deg); }
 
     /* Real logo sizing */
     #navLogoImg {
@@ -5556,8 +4942,8 @@ nav ul li a:hover {
       <li><a href="#menu" data-i18n="nav_menu">🍔 CARTA 🍔
 </a></li>
       <li><a href="#galeria" data-i18n="nav_galeria">Galería</a></li>
-      <div id="navLogoCenter" onclick="handleSecretClick(event)"
-        style="pointer-events:all;display:flex;align-items:center;opacity:1;cursor:pointer;transition:opacity 0.2s;">
+      <div id="navLogoCenter"
+        style="display:flex;align-items:center;opacity:1;transition:opacity 0.2s;">
         <img src="logo.png" style="width: 100px; height: 100px;">
       </div>
       <li><a href="#contacto" data-i18n="nav_contacto">Ubicaciones</a></li>
@@ -5565,15 +4951,6 @@ nav ul li a:hover {
      
     </ul>
     <div class="nav-right">
-      <a href="#" onclick="openReserveModal(); return false;" class="nav-reserve-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path
-            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.71 2.81a2 2 0 0 1-.45 2.11L7.91 10.1a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.91.35 1.85.58 2.81.71A2 2 0 0 1 21.5 17.4z" />
-        </svg>
-        <span data-i18n="btn_reservar_nav">Reservar</span>
-      </a>
-      <div style="width:1px;height:22px;background:rgba(201,147,58,0.25);margin:0 0.3rem;"></div>
       <div class="lang-switcher">
 
         <!-- 🇪🇸 Español -->
@@ -5630,6 +5007,13 @@ nav ul li a:hover {
         </button>
 
       </div>
+      <div style="width:1px;height:22px;background:rgba(201,147,58,0.25);margin:0 0.3rem;"></div>
+      <button id="navGearBtn" onclick="handleGearClick()" title="Admin" style="background:none;border:none;cursor:pointer;padding:4px;display:flex;align-items:center;opacity:0.35;transition:opacity 0.2s,transform 0.4s;color:var(--muted);" onmouseenter="this.style.opacity='0.9';this.style.color='var(--gold)'" onmouseleave="this.style.opacity=admLoggedIn?'1':'0.35';this.style.color=admLoggedIn?'var(--gold)':'var(--muted)'">
+        <svg id="navGearIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+      </button>
     </div>
 
     <!-- Hamburger button (mobile only) -->
@@ -5643,12 +5027,8 @@ nav ul li a:hover {
     <a href="#sobre" data-i18n="nav_sobre" onclick="closeMobileMenu()">Nosotros</a>
     <a href="#menu" data-i18n="nav_menu" onclick="closeMobileMenu()">Menú</a>
     <a href="#galeria" data-i18n="nav_galeria" onclick="closeMobileMenu()">Galería</a>
-    <a href="#reservas" data-i18n="nav_reservas" onclick="closeMobileMenu()">Reservas</a>
     <a href="#contacto" data-i18n="nav_contacto" onclick="closeMobileMenu()">Ubicaciones</a>
     <a href="#resenas" data-i18n="nav_resenas" onclick="closeMobileMenu()">Reseñas</a>
-    <a href="#reservas" class="nav-reserve-btn" style="margin-top:0.5rem;" onclick="closeMobileMenu()">
-      <span data-i18n="btn_reservar_nav">Reservar</span>
-    </a>
     <div class="mobile-lang">
       <button class="lang-btn active" data-lang="es" onclick="setLang('es');closeMobileMenu()">
         <svg class="flag-svg" viewBox="0 0 20 14">
@@ -8233,123 +7613,6 @@ nav ul li a:hover {
     </div>
   </section>
 
-  <!-- RESERVAS -->
-  <section id="reservas" style="background:var(--black); padding:8rem 4rem;">
-    <div style="max-width:1000px; margin:0 auto;">
-      <div class="reveal" style="text-align:center; margin-bottom:3rem;">
-        <p class="section-tag" style="justify-content:center; display:flex; gap:1rem; align-items:center;">
-          <span style="width:40px;height:1px;background:var(--gold);opacity:.5;display:inline-block;"></span>
-          <span data-i18n="reservas_tag">Reserva tu mesa</span>
-          <span style="width:40px;height:1px;background:var(--gold);opacity:.5;display:inline-block;"></span>
-        </p>
-        <h2 class="section-title" data-i18n="reservas_title">Reservas</h2>
-        <div class="section-line" style="margin:0 auto 1rem;"></div>
-        <p style="color:var(--muted); font-size:0.9rem;"><span data-i18n="booking_sub">Elige fecha, hora y número de
-            comensales. Te esperamos.</span></p>
-      </div>
-
-      <div class="booking-widget reveal">
-        <!-- Step 1: Date -->
-        <div class="booking-step active" id="step1">
-          <div class="booking-step-label">
-            <span class="step-num">1</span>
-            <span data-i18n="booking_step1">Selecciona una fecha</span>
-          </div>
-          <div class="calendar-wrap">
-            <div class="cal-header">
-              <button class="cal-nav" id="prevMonth">&#8592;</button>
-              <span class="cal-month-label" id="calMonthLabel"></span>
-              <button class="cal-nav" id="nextMonth">&#8594;</button>
-            </div>
-            <div class="cal-days-header">
-              <span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span>
-            </div>
-            <div class="cal-grid" id="calGrid"></div>
-          </div>
-        </div>
-
-        <!-- Step 2: Time + Pax (shown after date selected) -->
-        <div class="booking-step" id="step2">
-          <div class="booking-step-label">
-            <span class="step-num">2</span>
-            <span data-i18n="booking_step2">Elige hora y comensales</span>
-          </div>
-          <div class="time-pax-grid">
-            <div>
-              <p class="booking-sublabel" data-i18n="book_hora">Hora</p>
-              <div class="time-slots" id="timeSlots"></div>
-            </div>
-            <div>
-              <p class="booking-sublabel" data-i18n="book_pax">Comensales</p>
-              <div class="pax-selector">
-                <button class="pax-btn" id="paxMinus">−</button>
-                <span class="pax-num" id="paxNum">2</span>
-                <button class="pax-btn" id="paxPlus">+</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 3: Contact -->
-        <div class="booking-step" id="step3">
-          <div class="booking-step-label">
-            <span class="step-num">3</span>
-            <span data-i18n="booking_step3">Tus datos</span>
-          </div>
-          <div class="booking-form">
-            <div class="form-row">
-              <div class="form-field">
-                <label data-i18n="form_name">Nombre</label>
-                <input type="text" id="bookName" placeholder="Tu nombre" />
-              </div>
-              <div class="form-field">
-                <label data-i18n="form_phone">Teléfono</label>
-                <input type="tel" id="bookPhone" placeholder="+34 600 000 000" />
-              </div>
-            </div>
-            <div class="form-field">
-              <label data-i18n="form_email">Email</label>
-              <input type="email" id="bookEmail" placeholder="tu@email.com" />
-            </div>
-            <div class="form-field">
-              <label data-i18n="form_notes">Notas adicionales (opcional)</label>
-              <textarea id="bookNotes" placeholder="Alergias, celebración especial..."></textarea>
-            </div>
-          </div>
-        </div>
-
-        <!-- Summary + CTA -->
-        <div class="booking-summary" id="bookingSummary">
-          <div class="summary-row" id="summaryDate" style="display:none">
-            <span class="summary-icon">📅</span>
-            <span id="summaryDateText"></span>
-          </div>
-          <div class="summary-row" id="summaryTime" style="display:none">
-            <span class="summary-icon">🕐</span>
-            <span id="summaryTimeText"></span>
-          </div>
-          <div class="summary-row" id="summaryPax" style="display:none">
-            <span class="summary-icon">👥</span>
-            <span id="summaryPaxText"></span>
-          </div>
-        </div>
-
-        <div style="text-align:center; margin-top:2rem;">
-          <button class="btn btn-primary" id="confirmBtn" style="display:none; font-size:0.85rem; padding:1rem 3rem;"
-            onclick="confirmBooking()" data-i18n="confirmar_reserva">Confirmar Reserva</button>
-        </div>
-
-        <div class="booking-confirmed" id="bookingConfirmed">
-          <div class="confirmed-icon">✅</div>
-          <h3 class="confirmed-title" data-i18n="confirmed_title">¡Reserva confirmada!</h3>
-          <p class="confirmed-sub" data-i18n="confirmed_sub">Te esperamos en Kalavia. Recibirás un recordatorio.</p>
-          <button class="btn btn-outline" style="margin-top:1.5rem;" onclick="resetBooking()"
-            data-i18n="nueva_reserva">Nueva reserva</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- GALERÍA -->
   <section id="galeria" style="padding:14rem 0; background:var(--black); overflow:hidden;">
 
@@ -8902,7 +8165,7 @@ nav ul li a:hover {
     </section>
 
     <!-- FOOTER -->
-    <footer style="margin-top:6rem;">
+    <footer >
       <div class="footer-glow-top"></div>
       <div class="footer-inner">
 
@@ -9011,154 +8274,6 @@ nav ul li a:hover {
           });
         });
       });
-
-      // ── BOOKING CALENDAR ──
-      // Calendar lang data defined after currentLang init below
-      const TIMES = ['13:00', '13:30', '14:00', '14:30', '15:00', '20:00', '20:30', '21:00', '21:30', '22:00', '22:30'];
-
-      let calDate = new Date();
-      let selectedDate = null;
-      let selectedTime = null;
-      let pax = 2;
-
-      const calGrid = document.getElementById('calGrid');
-      const calMonthLabel = document.getElementById('calMonthLabel');
-
-      let currentLang = "es";
-
-      const MONTHS_BY_LANG = {
-        es: ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE'],
-        ca: ['GENER', 'FEBRER', 'MARÇ', 'ABRIL', 'MAIG', 'JUNY', 'JULIOL', 'AGOST', 'SETEMBRE', 'OCTUBRE', 'NOVEMBRE', 'DESEMBRE'],
-        en: ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'],
-        fr: ['JANVIER', 'FÉVRIER', 'MARS', 'AVRIL', 'MAI', 'JUIN', 'JUILLET', 'AOÛT', 'SEPTEMBRE', 'OCTOBRE', 'NOVEMBRE', 'DÉCEMBRE']
-      };
-      const DAYS_BY_LANG = {
-        es: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'],
-        ca: ['Dl', 'Dm', 'Dc', 'Dj', 'Dv', 'Ds', 'Dg'],
-        en: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-        fr: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim']
-      };
-      function getMonths() { return MONTHS_BY_LANG[currentLang] || MONTHS_BY_LANG.es; }
-      function getDays() { return DAYS_BY_LANG[currentLang] || DAYS_BY_LANG.es; }
-
-      function renderCalendar() {
-        const year = calDate.getFullYear();
-        const month = calDate.getMonth();
-        calMonthLabel.textContent = getMonths()[month] + ' ' + year;
-        calGrid.innerHTML = '';
-
-        const firstDay = new Date(year, month, 1);
-        const lastDay = new Date(year, month + 1, 0);
-        const today = new Date(); today.setHours(0, 0, 0, 0);
-
-        // Monday-first offset
-        let startOffset = (firstDay.getDay() + 6) % 7;
-        for (let i = 0; i < startOffset; i++) {
-          const empty = document.createElement('div');
-          empty.className = 'cal-day empty';
-          calGrid.appendChild(empty);
-        }
-
-        for (let d = 1; d <= lastDay.getDate(); d++) {
-          const dayEl = document.createElement('div');
-          const thisDate = new Date(year, month, d);
-          dayEl.className = 'cal-day';
-          dayEl.textContent = d;
-
-          if (thisDate < today) {
-            dayEl.classList.add('past');
-          } else {
-            if (thisDate.toDateString() === today.toDateString()) dayEl.classList.add('today');
-            if (selectedDate && thisDate.toDateString() === selectedDate.toDateString()) dayEl.classList.add('selected');
-            dayEl.addEventListener('click', () => selectDate(thisDate, year, month, d));
-          }
-          calGrid.appendChild(dayEl);
-        }
-      }
-
-      function selectDate(date, y, m, d) {
-        selectedDate = date;
-        renderCalendar();
-        // Activate step 2
-        document.getElementById('step2').classList.add('active');
-        // Update summary
-        const dayName = getDays()[(date.getDay() + 6) % 7];
-        document.getElementById('summaryDate').style.display = 'flex';
-        document.getElementById('summaryDateText').textContent = dayName + ', ' + d + ' de ' + getMonths()[m].charAt(0) + getMonths()[m].slice(1).toLowerCase() + ' ' + y;
-        updateSummaryPax();
-        checkConfirmBtn();
-      }
-
-      function updateSummaryPax() {
-        document.getElementById('summaryPax').style.display = 'flex';
-        document.getElementById('summaryPaxText').textContent = pax + (pax === 1 ? ' comensal' : ' comensales');
-      }
-
-      // Render time slots
-      const timeSlotsEl = document.getElementById('timeSlots');
-      TIMES.forEach(t => {
-        const btn = document.createElement('button');
-        btn.className = 'time-slot';
-        btn.textContent = t;
-        btn.addEventListener('click', () => {
-          document.querySelectorAll('.time-slot').forEach(b => b.classList.remove('selected'));
-          btn.classList.add('selected');
-          selectedTime = t;
-          document.getElementById('step3').classList.add('active');
-          document.getElementById('summaryTime').style.display = 'flex';
-          document.getElementById('summaryTimeText').textContent = t + 'h';
-          checkConfirmBtn();
-        });
-        timeSlotsEl.appendChild(btn);
-      });
-
-      // Pax
-      document.getElementById('paxMinus').addEventListener('click', () => {
-        if (pax > 1) { pax--; document.getElementById('paxNum').textContent = pax; updateSummaryPax(); }
-      });
-      document.getElementById('paxPlus').addEventListener('click', () => {
-        if (pax < 20) { pax++; document.getElementById('paxNum').textContent = pax; updateSummaryPax(); }
-      });
-
-      function checkConfirmBtn() {
-        if (selectedDate && selectedTime) {
-          document.getElementById('confirmBtn').style.display = 'inline-block';
-        }
-      }
-
-      // Cal nav
-      document.getElementById('prevMonth').addEventListener('click', () => {
-        calDate.setMonth(calDate.getMonth() - 1); renderCalendar();
-      });
-      document.getElementById('nextMonth').addEventListener('click', () => {
-        calDate.setMonth(calDate.getMonth() + 1); renderCalendar();
-      });
-
-      function confirmBooking() {
-        document.querySelector('.booking-widget').querySelectorAll('.booking-step, .booking-summary, #confirmBtn').forEach(el => el.style.display = 'none');
-        const confirmed = document.getElementById('bookingConfirmed');
-        confirmed.style.display = 'block';
-      }
-      function resetBooking() {
-        selectedDate = null; selectedTime = null; pax = 2;
-        document.getElementById('paxNum').textContent = 2;
-        document.querySelectorAll('.time-slot').forEach(b => b.classList.remove('selected'));
-        document.getElementById('bookingConfirmed').style.display = 'none';
-        document.getElementById('confirmBtn').style.display = 'none';
-        document.querySelector('.booking-widget').querySelectorAll('.booking-step').forEach((el, i) => {
-          el.style.display = ''; el.classList.toggle('active', i === 0);
-        });
-        document.getElementById('bookingSummary').style.display = '';
-        ['summaryDate', 'summaryTime', 'summaryPax'].forEach(id => document.getElementById(id).style.display = 'none');
-        renderCalendar();
-      }
-
-      renderCalendar();
-
-
-
-
-
       // ── NAV SCROLL ──
       window.addEventListener('scroll', function () {
         document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 60);
@@ -9190,7 +8305,6 @@ nav ul li a:hover {
       }
 
 
-
       // ── MENU TABS ──
       (function () {
         var tabs = Array.from(document.querySelectorAll('.menu-tab'));
@@ -9220,8 +8334,7 @@ nav ul li a:hover {
         /* ════════ ESPAÑOL ════════ */
         es: {
           nav_sobre: "Nosotros", nav_menu: "Menú", nav_galeria: "Galería",
-          nav_reservas: "Reservas", nav_contacto: "Ubicaciones", nav_resenas: "Reseñas",
-          btn_reservar_nav: "Reservar",
+          nav_contacto: "Ubicaciones", nav_resenas: "Reseñas",
           hero_eyebrow: "Hamburguesería — Reus, Tarragona",
           hero_sub: "Donde cada bocado cuenta una historia",
           btn_carta: "Ver Carta", btn_contacto: "Encontrarnos", scroll_hint: "Descubrir",
@@ -9239,13 +8352,8 @@ nav ul li a:hover {
           cat_burgers: "Burguers", cat_postres: "Postres", cat_ensaladas: "Ensaladas",
           gallery_tag: "Nuestra esencia", gallery_title: "Galería",
           gallery_hint: "Haz clic en cualquier foto para ampliarla",
-          reservas_title: "Reservas", reservas_tag: "Reserva tu mesa",
-          booking_sub: "Elige fecha, hora y número de comensales. Te esperamos.",
-          booking_step1: "Selecciona una fecha", booking_step2: "Elige hora y comensales", booking_step3: "Tus datos",
-          book_hora: "Hora", book_pax: "Comensales",
           form_name: "Nombre", form_phone: "Teléfono", form_email: "Email",
           form_notes: "Notas adicionales (opcional)",
-          confirmed_title: "¡Reserva confirmada!", confirmed_sub: "Te esperamos en Kalavia. Recibirás un recordatorio.",
           contact_title: "Visítanos", contact_tag: "Dónde encontrarnos",
           contact_addr_label: "Dirección", contact_phone_label: "Teléfono",
           contact_hours_label: "Horario", contact_delivery_label: "Para llevar &amp; Domicilio",
@@ -9264,16 +8372,13 @@ nav ul li a:hover {
           feat_bread: "Pan brioche horneado diariamente",
           feat_meat: "Carne seleccionada con mimo",
           feat_sauce: "Salsas elaboradas en casa",
-          feat_fresh: "Ingredientes frescos cada día"
-          ,
+          feat_fresh: "Ingredientes frescos cada día",
           footer_desc: "Auténticas hamburguesas artesanales en el corazón del Camp de Tarragona. Ingredientes frescos, recetas únicas.",
           nov_card_tag: "✨ Novedad del mes",
           nov_card_name: "Nueva creación",
           nov_card_desc: "Próximamente revelaremos nuestra última creación. ¡Mantente atento a nuestras redes!",
           card_back_note: "Consulta con nuestro personal si tienes alguna alergia o intolerancia.",
           flip_close: "✕ Cerrar",
-          nueva_reserva: "Nueva reserva",
-          confirmar_reserva: "Confirmar Reserva",
           vid_add: "Añadir vídeo",
           vid_source_default: "📱 TikTok / Instagram",
           vid_title_default: "Reacción de cliente",
@@ -9281,14 +8386,11 @@ nav ul li a:hover {
           vid_title_label: "Título / descripción",
           vid_source_label: "Fuente",
           vid_cancel: "Cancelar",
-          vid_save: "💾 Guardar"
-          ,
-          pdf_download: "📄 Descargar carta PDF"
-          ,
+          vid_save: "💾 Guardar",
+          pdf_download: "📄 Descargar carta PDF",
           h_lun: "Lunes",
           h_mar: "Martes",
-          h_mie: "Miércoles"
-          ,
+          h_mie: "Miércoles",
           card_name_0: "Nachos Caseros",
           card_name_1: "Fingers de Pollo a la Miel y Mostaza",
           card_name_2: "Tequeños Anabolizados",
@@ -9376,29 +8478,24 @@ nav ul li a:hover {
           card_desc_40: "Lechuga baby leaf, almendra laminada, tomate cherry, salmón ahumado...",
           card_desc_41: "Lechuga baby leaf, nueces, cebolla crujiente, bacon crispy, tomate cherry...",
           card_desc_42: "Lechuga baby leaf, escamas de queso manchego de oveja, picatostes, tomate...",
-          card_desc_43: "Descripción del plato."
-          ,
+          card_desc_43: "Descripción del plato.",
           badge_popular: "🔥 Popular",
           badge_top: "⭐ Top",
           badge_novedad: "✨ Novedad",
           badge_temporada: "🌿 Temporada",
           badge_vegetariano: "🥬 Vegetariano",
-          badge_veggie: "🥬 Veggie"
-          ,
+          badge_veggie: "🥬 Veggie",
           "badge_popular": "Popular",
           "badge_champion": "⭐ Top",
           "badge_novedad": "✨ Novedad",
           "badge_temporada": "🌿 Temporada",
-          "book_pax": "Comensales"
-          ,
           allergen_title: "⚠ ALÉRGENOS"
         },
 
         /* ════════ CATALÀ ════════ */
         ca: {
           nav_sobre: "Nosaltres", nav_menu: "Carta", nav_galeria: "Galeria",
-          nav_reservas: "Reserves", nav_contacto: "Ubicacions", nav_resenas: "Ressenyes",
-          btn_reservar_nav: "Reservar",
+          nav_contacto: "Ubicacions", nav_resenas: "Ressenyes",
           hero_eyebrow: "Hamburgueseria — Reus, Tarragona",
           hero_sub: "On cada mos explica una història",
           btn_carta: "Veure la Carta", btn_contacto: "Troba'ns", scroll_hint: "Descobrir",
@@ -9416,13 +8513,8 @@ nav ul li a:hover {
           cat_burgers: "Burguers", cat_postres: "Postres", cat_ensaladas: "Amanides",
           gallery_tag: "La nostra essència", gallery_title: "Galeria",
           gallery_hint: "Fes clic a qualsevol foto per ampliar-la",
-          reservas_title: "Reserves", reservas_tag: "Reserva la teva taula",
-          booking_sub: "Tria data, hora i nombre de comensals. T'esperem.",
-          booking_step1: "Selecciona una data", booking_step2: "Tria hora i comensals", booking_step3: "Les teves dades",
-          book_hora: "Hora", book_pax: "Comensals",
           form_name: "Nom", form_phone: "Telèfon", form_email: "Correu electrònic",
           form_notes: "Notes addicionals (opcional)",
-          confirmed_title: "Reserva confirmada!", confirmed_sub: "T'esperem a Kalavia. Rebràs un recordatori.",
           contact_title: "Visita'ns", contact_tag: "On trobar-nos",
           contact_addr_label: "Adreça", contact_phone_label: "Telèfon",
           contact_hours_label: "Horari", contact_delivery_label: "Per emportar &amp; Domicili",
@@ -9432,8 +8524,7 @@ nav ul li a:hover {
           reviews_title: "Ressenyes", reviews_tag: "El que diuen els nostres clients",
           rating_count: "308 opinions a Google",
           footer_tagline: "Hamburgueseria · Reus", footer_follow: "Segueix-nos",
-          footer_copy: "© 2025 Kalavia Hamburgueseria · Reus, Tarragona"
-          ,
+          footer_copy: "© 2025 Kalavia Hamburgueseria · Reus, Tarragona",
           menu_note: "Carta subjecta a disponibilitat de temporada. Consulteu-nos pels al·lèrgens.",
           allergen_btn: "⚠ Al·lèrgens",
           nov_badge: "✨ Novetat", nov_title: "Novetats",
@@ -9442,16 +8533,13 @@ nav ul li a:hover {
           feat_bread: "Pa brioix fornejat diàriament",
           feat_meat: "Carn seleccionada amb cura",
           feat_sauce: "Salses elaborades a casa",
-          feat_fresh: "Ingredients frescos cada dia"
-          ,
+          feat_fresh: "Ingredients frescos cada dia",
           footer_desc: "Autèntiques hamburgueses artesanals al cor del Camp de Tarragona. Ingredients frescos, receptes úniques.",
           nov_card_tag: "✨ Novetat del mes",
           nov_card_name: "Nova creació",
           nov_card_desc: "Properament revelarem la nostra última creació. ¡Estigues atent a les xarxes!",
           card_back_note: "Consulta amb el nostre personal si tens alguna al·lèrgia o intolerància.",
           flip_close: "✕ Tancar",
-          nueva_reserva: "Nova reserva",
-          confirmar_reserva: "Confirmar Reserva",
           vid_add: "Afegir vídeo",
           vid_source_default: "📱 TikTok / Instagram",
           vid_title_default: "Reacció de client",
@@ -9459,14 +8547,11 @@ nav ul li a:hover {
           vid_title_label: "Títol / descripció",
           vid_source_label: "Font",
           vid_cancel: "Cancel·lar",
-          vid_save: "💾 Desar"
-          ,
-          pdf_download: "📄 Descarregar carta PDF"
-          ,
+          vid_save: "💾 Desar",
+          pdf_download: "📄 Descarregar carta PDF",
           h_lun: "Dilluns",
           h_mar: "Dimarts",
-          h_mie: "Dimecres"
-          ,
+          h_mie: "Dimecres",
           card_name_0: "Nachos Caseros",
           card_name_1: "Fingers de Pollo a la Miel y Mostaza",
           card_name_2: "Tequeños Anabolizados",
@@ -9554,29 +8639,24 @@ nav ul li a:hover {
           card_desc_40: "Amanida fresca de salmó i mango.",
           card_desc_41: "Amanida calenta de formatge de cabra.",
           card_desc_42: "Amanida gourmet de pollastre a la planxa.",
-          card_desc_43: "Nou plat de temporada."
-          ,
+          card_desc_43: "Nou plat de temporada.",
           badge_popular: "🔥 Popular",
           badge_top: "⭐ Top",
           badge_novedad: "✨ Novetat",
           badge_temporada: "🌿 Temporada",
           badge_vegetariano: "🥬 Vegetarià",
-          badge_veggie: "🥬 Veggie"
-          ,
+          badge_veggie: "🥬 Veggie",
           "badge_popular": "Popular",
           "badge_champion": "⭐ Top",
           "badge_novedad": "✨ Novetat",
           "badge_temporada": "🌿 Temporada",
-          "book_pax": "Comensals"
-          ,
           allergen_title: "⚠ AL·LÈRGENS"
         },
 
         /* ════════ ENGLISH ════════ */
         en: {
           nav_sobre: "About", nav_menu: "Menu", nav_galeria: "Gallery",
-          nav_reservas: "Bookings", nav_contacto: "Location", nav_resenas: "Reviews",
-          btn_reservar_nav: "Book Now",
+          nav_contacto: "Location", nav_resenas: "Reviews",
           hero_eyebrow: "Burger Restaurant — Reus, Tarragona",
           hero_sub: "🍔 Where every bite tells a story",
           btn_carta: "View Menu", btn_contacto: "Find Us", scroll_hint: "Discover",
@@ -9594,13 +8674,8 @@ nav ul li a:hover {
           cat_burgers: "Burgers", cat_postres: "Desserts", cat_ensaladas: "Salads",
           gallery_tag: "Our essence", gallery_title: "Gallery",
           gallery_hint: "Click any photo to enlarge it",
-          reservas_title: "Bookings", reservas_tag: "Reserve your table",
-          booking_sub: "Choose a date, time and number of guests. We will be waiting for you.",
-          booking_step1: "Select a date", booking_step2: "Choose time and guests", booking_step3: "Your details",
-          book_hora: "Time", book_pax: "Guests",
           form_name: "Name", form_phone: "Phone", form_email: "Email",
           form_notes: "Additional notes (optional)",
-          confirmed_title: "Booking confirmed!", confirmed_sub: "We'll be waiting for you at Kalavia. You'll receive a reminder.",
           contact_title: "Find Us", contact_tag: "Where to find us",
           contact_addr_label: "Address", contact_phone_label: "Phone",
           contact_hours_label: "Horario", contact_delivery_label: "Takeaway &amp; Delivery",
@@ -9610,8 +8685,7 @@ nav ul li a:hover {
           reviews_title: "Reviews", reviews_tag: "What our customers say",
           rating_count: "308 reviews on Google",
           footer_tagline: "Burger Restaurant · Reus", footer_follow: "Follow us",
-          footer_copy: "© 2025 Kalavia Burger Restaurant · Reus, Tarragona"
-          ,
+          footer_copy: "© 2025 Kalavia Burger Restaurant · Reus, Tarragona",
           menu_note: "Menu subject to seasonal availability. Ask us about allergens.",
           allergen_btn: "⚠ Allergens",
           nov_badge: "✨ New", nov_title: "New Dishes",
@@ -9620,16 +8694,13 @@ nav ul li a:hover {
           feat_bread: "Brioche bun baked daily",
           feat_meat: "Carefully selected meat",
           feat_sauce: "House-made sauces",
-          feat_fresh: "Fresh ingredients every day"
-          ,
+          feat_fresh: "Fresh ingredients every day",
           footer_desc: "Authentic artisan burgers in the heart of Camp de Tarragona. Fresh ingredients, unique recipes.",
           nov_card_tag: "✨ Dish of the month",
           nov_card_name: "New creation",
           nov_card_desc: "We will soon reveal our latest creation. Stay tuned on our social media!",
           card_back_note: "Ask our staff if you have any allergy or food intolerance.",
           flip_close: "✕ Close",
-          nueva_reserva: "New reservation",
-          confirmar_reserva: "Confirm Booking",
           vid_add: "Add video",
           vid_source_default: "📱 TikTok / Instagram",
           vid_title_default: "Customer\'s reaction",
@@ -9637,14 +8708,11 @@ nav ul li a:hover {
           vid_title_label: "Title / description",
           vid_source_label: "Source",
           vid_cancel: "Cancel",
-          vid_save: "💾 Save"
-          ,
-          pdf_download: "📄 Download menu PDF"
-          ,
+          vid_save: "💾 Save",
+          pdf_download: "📄 Download menu PDF",
           h_lun: "Monday",
           h_mar: "Tuesday",
-          h_mie: "Wednesday"
-          ,
+          h_mie: "Wednesday",
           card_name_0: "Nachos Caseros",
           card_name_1: "Fingers de Pollo a la Miel y Mostaza",
           card_name_2: "Tequeños Anabolizados",
@@ -9732,20 +8800,17 @@ nav ul li a:hover {
           card_desc_40: "Fresh salmon and mango salad.",
           card_desc_41: "Warm goat cheese salad.",
           card_desc_42: "Gourmet grilled chicken salad.",
-          card_desc_43: "New seasonal dish."
-          ,
+          card_desc_43: "New seasonal dish.",
           badge_popular: "🔥 Popular",
           badge_top: "⭐ Top",
           badge_novedad: "✨ New",
           badge_temporada: "🌿 Seasonal",
           badge_vegetariano: "🥬 Vegetarian",
-          badge_veggie: "🥬 Veggie"
-          ,
+          badge_veggie: "🥬 Veggie",
           "badge_popular": "Popular",
           "badge_champion": "⭐ Top",
           "badge_novedad": "✨ New",
           "badge_temporada": "🌿 Seasonal",
-          "book_pax": "Guests",
           "card_name_0": "Homemade Nachos",
           "card_name_1": "Honey Mustard Chicken Fingers",
           "card_name_2": "Loaded Tequeños",
@@ -9789,16 +8854,14 @@ nav ul li a:hover {
           "card_name_40": "Salmon & Mango Salad",
           "card_name_41": "Goat Cheese Salad",
           "card_name_42": "Gourmet Chicken Salad",
-          "card_name_43": "New dish"
-          ,
+          "card_name_43": "New dish",
           allergen_title: "⚠ ALLERGENS"
         },
 
         /* ════════ FRANÇAIS ════════ */
         fr: {
           nav_sobre: "À propos", nav_menu: "Carte", nav_galeria: "Galerie",
-          nav_reservas: "Réservations", nav_contacto: "Adresses", nav_resenas: "Avis",
-          btn_reservar_nav: "Réserver",
+          nav_contacto: "Adresses", nav_resenas: "Avis",
           hero_eyebrow: "Restaurant Burgers — Reus, Tarragone",
           hero_sub: "Là où chaque bouchée raconte une histoire",
           btn_carta: "Voir la Carte", btn_contacto: "Nous trouver", scroll_hint: "Découvrir",
@@ -9816,13 +8879,8 @@ nav ul li a:hover {
           cat_burgers: "Burgers", cat_postres: "Desserts", cat_ensaladas: "Salades",
           gallery_tag: "Notre essence", gallery_title: "Galerie",
           gallery_hint: "Cliquez sur une photo pour l'agrandir",
-          reservas_title: "Réservations", reservas_tag: "Réserver votre table",
-          booking_sub: "Choisissez une date, une heure et le nombre de convives. Nous vous attendons.",
-          booking_step1: "Sélectionnez une date", booking_step2: "Choisissez heure et convives", booking_step3: "Vos coordonnées",
-          book_hora: "Heure", book_pax: "Convives",
           form_name: "Prénom", form_phone: "Téléphone", form_email: "Email",
           form_notes: "Notes supplémentaires (facultatif)",
-          confirmed_title: "Réservation confirmée !", confirmed_sub: "Nous vous attendons chez Kalavia. Vous recevrez un rappel.",
           contact_title: "Nous trouver", contact_tag: "Où nous trouver",
           contact_addr_label: "Adresse", contact_phone_label: "Téléphone",
           contact_hours_label: "Horaire", contact_delivery_label: "À emporter &amp; Livraison",
@@ -9832,8 +8890,7 @@ nav ul li a:hover {
           reviews_title: "Avis", reviews_tag: "Ce que disent nos clients",
           rating_count: "308 avis sur Google",
           footer_tagline: "Restaurant Burgers · Reus", footer_follow: "Suivez-nous",
-          footer_copy: "© 2025 Kalavia Restaurant Burgers · Reus, Tarragone"
-          ,
+          footer_copy: "© 2025 Kalavia Restaurant Burgers · Reus, Tarragone",
           menu_note: "Carte soumise à disponibilité saisonnière. Renseignez-vous sur les allergènes.",
           allergen_btn: "⚠ Allergènes",
           nov_badge: "✨ Nouveau", nov_title: "Nouveautés",
@@ -9842,16 +8899,13 @@ nav ul li a:hover {
           feat_bread: "Brioche cuit chaque jour",
           feat_meat: "Viande sélectionnée avec soin",
           feat_sauce: "Sauces maison",
-          feat_fresh: "Ingrédients frais chaque jour"
-          ,
+          feat_fresh: "Ingrédients frais chaque jour",
           footer_desc: "Vrais burgers artisanaux au cœur du Camp de Tarragone. Ingrédients frais, recettes uniques.",
           nov_card_tag: "✨ Plat du mois",
           nov_card_name: "Nouvelle création",
           nov_card_desc: "Nous révélerons bientôt notre dernière création. Restez à l\'écoute sur nos réseaux!",
           card_back_note: "Consultez notre personnel si vous avez une allergie ou une intolérance.",
           flip_close: "✕ Fermer",
-          nueva_reserva: "Nouvelle réservation",
-          confirmar_reserva: "Confirmer la réservation",
           vid_add: "Ajouter une vidéo",
           vid_source_default: "📱 TikTok / Instagram",
           vid_title_default: "Réaction client",
@@ -9859,14 +8913,11 @@ nav ul li a:hover {
           vid_title_label: "Titre / description",
           vid_source_label: "Source",
           vid_cancel: "Annuler",
-          vid_save: "💾 Enregistrer"
-          ,
-          pdf_download: "📄 Télécharger la carte PDF"
-          ,
+          vid_save: "💾 Enregistrer",
+          pdf_download: "📄 Télécharger la carte PDF",
           h_lun: "Lundi",
           h_mar: "Mardi",
-          h_mie: "Mercredi"
-          ,
+          h_mie: "Mercredi",
           card_name_0: "Nachos Caseros",
           card_name_1: "Fingers de Pollo a la Miel y Mostaza",
           card_name_2: "Tequeños Anabolizados",
@@ -9954,20 +9005,17 @@ nav ul li a:hover {
           card_desc_40: "Salade fraiche saumon et mangue.",
           card_desc_41: "Salade chaude de chevre.",
           card_desc_42: "Salade gourmande de poulet grillé.",
-          card_desc_43: "Nouveau plat de saison."
-          ,
+          card_desc_43: "Nouveau plat de saison.",
           badge_popular: "🔥 Populaire",
           badge_top: "⭐ Top",
           badge_novedad: "✨ Nouveauté",
           badge_temporada: "🌿 Saison",
           badge_vegetariano: "🥬 Végétarien",
-          badge_veggie: "🥬 Veggie"
-          ,
+          badge_veggie: "🥬 Veggie",
           "badge_popular": "Populaire",
           "badge_champion": "⭐ Top",
           "badge_novedad": "✨ Nouveau",
           "badge_temporada": "🌿 Saison",
-          "book_pax": "Couverts",
           "card_name_0": "Nachos Maison",
           "card_name_1": "Chicken Fingers Miel-Moutarde",
           "card_name_2": "Tequeños Chargés",
@@ -10011,15 +9059,12 @@ nav ul li a:hover {
           "card_name_40": "Salade Saumon & Mangue",
           "card_name_41": "Salade de Chèvre",
           "card_name_42": "Salade Gourmet Poulet",
-          "card_name_43": "Nouveau plat"
-          ,
+          "card_name_43": "Nouveau plat",
           allergen_title: "⚠ ALLERGÈNES"
         }
       };
       // Safe DOM access helper
       function safeEl(id) { return document.getElementById(id); }
-
-
 
 
       function setLang(lang) {
@@ -10047,54 +9092,177 @@ nav ul li a:hover {
       }
 
 
-
-
-
-
       // ══════════════════════════════════════════════════════
-      //  ADMIN MODE - SIMPLIFICADO (Un clic abre el login)
+      //  ADMIN MODE — Engranaje en navbar → Modo edición inline
       // ══════════════════════════════════════════════════════
-      const ADM_PASS = 'kalavia2024admin';
+      const ADM_PASS = 'admin';
       let admLoggedIn = false;
+      let admEditingCard = null;
+      let admNewImageData = null;
+      let admEditingNov = false;
 
-      // Función que se activa al darle al logo
+      function handleGearClick() {
+        if (admLoggedIn) admLogout();
+        else admOpenOverlay();
+      }
+
       function handleSecretClick(e) {
         if (e) { e.preventDefault(); e.stopPropagation(); }
-
-        // Si ya estamos logueados, abrimos el panel de control directamente
-        if (admLoggedIn) {
-          admOpenPanel();
-        } else {
-          // Si no, abrimos el formulario de contraseña
-          admOpenOverlay();
-        }
+        if (admLoggedIn) admLogout();
+        else admOpenOverlay();
       }
-
-
-      // --- VINCULACIÓN DIRECTA ---
 
       function initAdmin() {
-        const logo = document.getElementById('navLogoCenter');
-        if (logo) {
-          logo.onclick = handleSecretClick; // Vinculamos el clic al logo
-          logo.style.cursor = 'pointer';
-        }
-        // Si entran por URL con #admin, también se abre
         if (window.location.hash === '#admin') admOpenOverlay();
       }
-
-      // Asegurar que el código corre al cargar la página
       if (document.readyState === 'complete') initAdmin();
       else window.addEventListener('load', initAdmin);
+
+      // ── Floating edit bar (shown while in edit mode) ──
+      function admShowEditBar() {
+        if (document.getElementById('admEditBar')) return;
+        const bar = document.createElement('div');
+        bar.id = 'admEditBar';
+        bar.innerHTML = `<div style="display:flex;align-items:center;gap:0.8rem;"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg><span style="font-family:'Bebas Neue',sans-serif;font-size:0.9rem;letter-spacing:3px;color:var(--gold);">MODO EDICIÓN ACTIVO</span><span style="font-size:0.58rem;letter-spacing:1px;color:rgba(201,147,58,0.5);text-transform:uppercase;">Haz clic en cualquier texto, imagen o vídeo para editarlo</span></div><button onclick="admLogout()" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#aaa;padding:0.35rem 0.9rem;font-family:'DM Sans',sans-serif;font-size:0.62rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;" onmouseenter="this.style.background='rgba(192,57,43,0.2)';this.style.color='#e05c4a'" onmouseleave="this.style.background='rgba(255,255,255,0.06)';this.style.color='#aaa'">✕ Salir del modo admin</button>`;
+        bar.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:20000;background:rgba(6,6,6,0.97);border-bottom:1px solid rgba(201,147,58,0.35);padding:0.55rem 1.5rem;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(12px);box-shadow:0 2px 30px rgba(201,147,58,0.1);color:var(--white);';
+        document.body.prepend(bar);
+        var nav = document.querySelector('nav');
+        if (nav) nav.style.marginTop = bar.offsetHeight + 'px';
+      }
+
+      function admHideEditBar() {
+        var bar = document.getElementById('admEditBar');
+        if (bar) bar.remove();
+        var nav = document.querySelector('nav');
+        if (nav) nav.style.marginTop = '';
+      }
+
+      // ── Inline text editing ──
+      function admInlineTextClick(e) {
+        e.stopPropagation();
+        var el = e.currentTarget;
+        if (el.querySelector('input,textarea')) return;
+        var orig = el.innerHTML;
+        var tag = el.tagName.toLowerCase();
+        var isMulti = (tag === 'p' || el.classList.contains('card-desc') || el.classList.contains('about-quote') || el.classList.contains('contact-info-value'));
+        var inp = document.createElement(isMulti ? 'textarea' : 'input');
+        inp.value = el.innerText;
+        inp.style.cssText = 'width:100%;background:rgba(0,0,0,0.8);border:1px solid var(--gold);color:var(--white);font-family:inherit;font-size:inherit;font-weight:inherit;letter-spacing:inherit;text-align:inherit;padding:0.2rem 0.4rem;resize:vertical;outline:none;box-sizing:border-box;line-height:1.4;';
+        if (isMulti) { inp.rows = 3; }
+        el.innerHTML = '';
+        el.appendChild(inp);
+        inp.focus(); inp.select();
+        function save() { el.innerHTML = inp.value || orig; el.style.outline = ''; }
+        inp.addEventListener('blur', save);
+        inp.addEventListener('keydown', function(ev) {
+          if (!isMulti && ev.key === 'Enter') { ev.preventDefault(); inp.blur(); }
+          if (ev.key === 'Escape') { el.innerHTML = orig; }
+        });
+      }
+
+      // ── Image swap overlay ──
+      function admAddImgOverlay(img) {
+        var wrap = img.parentElement;
+        if (!wrap || wrap.querySelector('.adm-img-overlay')) return;
+        wrap.style.position = 'relative';
+        var ov = document.createElement('div');
+        ov.className = 'adm-img-overlay';
+        ov.textContent = '📷 Cambiar imagen';
+        ov.style.cssText = 'position:absolute;inset:0;z-index:10;background:rgba(0,0,0,0.55);display:none;align-items:center;justify-content:center;cursor:pointer;color:var(--gold);font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;font-family:"DM Sans",sans-serif;font-weight:700;border:1px dashed rgba(201,147,58,0.5);';
+        wrap.appendChild(ov);
+        wrap.addEventListener('mouseenter', function() { ov.style.display = 'flex'; });
+        wrap.addEventListener('mouseleave', function() { ov.style.display = 'none'; });
+        ov.addEventListener('click', function() {
+          var fi = document.createElement('input'); fi.type = 'file'; fi.accept = 'image/*';
+          fi.onchange = function() {
+            if (!fi.files[0]) return;
+            var reader = new FileReader();
+            reader.onload = function(ev) { img.src = ev.target.result; };
+            reader.readAsDataURL(fi.files[0]);
+          };
+          fi.click();
+        });
+      }
+
+      // ── Video edit overlay ──
+      function admAddVideoOverlay(card) {
+        if (card.querySelector('.adm-vid-overlay')) return;
+        var ov = document.createElement('div');
+        ov.className = 'adm-vid-overlay';
+        ov.textContent = '🎬 Editar vídeo';
+        ov.style.cssText = 'position:absolute;top:6px;right:6px;z-index:30;background:rgba(0,0,0,0.85);border:1px solid rgba(201,147,58,0.5);color:var(--gold);padding:0.3rem 0.6rem;font-size:0.58rem;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:"DM Sans",sans-serif;font-weight:700;';
+        card.style.position = 'relative';
+        card.appendChild(ov);
+        var vidId = card.getAttribute('data-vid-id');
+        ov.addEventListener('click', function(ev) { ev.stopPropagation(); admOpenVideoEdit(vidId !== null ? parseInt(vidId) : null); });
+      }
+
+      // ── Card edit overlays ──
+      function admAddCardOverlays() {
+        document.querySelectorAll('.card-front').forEach(function(front) {
+          if (front.querySelector('.adm-card-overlay')) return;
+          var ov = document.createElement('div');
+          ov.className = 'adm-card-overlay';
+          ov.innerHTML = '<span style="font-size:0.62rem;letter-spacing:2px;font-family:\'DM Sans\',sans-serif;font-weight:700;">✏ EDITAR PLATO</span>';
+          ov.style.cssText = 'position:absolute;top:0;left:0;right:0;bottom:0;z-index:20;background:rgba(201,147,58,0.07);display:none;align-items:center;justify-content:center;cursor:pointer;color:var(--gold);border:1px dashed rgba(201,147,58,0.45);pointer-events:auto;';
+          front.style.position = 'relative';
+          front.appendChild(ov);
+          front.addEventListener('mouseenter', function() { if (admLoggedIn) ov.style.display = 'flex'; });
+          front.addEventListener('mouseleave', function() { ov.style.display = 'none'; });
+          ov.addEventListener('click', function(ev) {
+            ev.stopPropagation();
+            var card = front.closest('.card');
+            if (card) admOpenEdit(card);
+          });
+        });
+      }
+
+      function admRemoveCardOverlays() {
+        document.querySelectorAll('.adm-card-overlay').forEach(function(ov) { ov.remove(); });
+      }
+
+      // ── Enable all inline editing ──
+      function admEnableInlineEditing() {
+        var editableSelectors = '.card-name, .card-desc, .card-price, .ht-time, .ht-day, .contact-info-value, .stat-number, .nov-card-name, .nov-card-desc, .nov-card-price';
+        document.querySelectorAll(editableSelectors).forEach(function(el) {
+          el.setAttribute('data-adm-editable', 'text');
+          el.style.cursor = 'text';
+          el.addEventListener('click', admInlineTextClick, true);
+          el.addEventListener('mouseenter', function() { el.style.outline = '1px dashed rgba(201,147,58,0.45)'; el.style.outlineOffset = '3px'; });
+          el.addEventListener('mouseleave', function() { el.style.outline = ''; el.style.outlineOffset = ''; });
+        });
+        document.querySelectorAll('.card-img, .gal-img img').forEach(function(img) {
+          admAddImgOverlay(img);
+        });
+        document.querySelectorAll('.video-card').forEach(function(card) {
+          admAddVideoOverlay(card);
+        });
+        admAddCardOverlays();
+      }
+
+      // ── Disable inline editing ──
+      function admDisableInlineEditing() {
+        document.querySelectorAll('[data-adm-editable]').forEach(function(el) {
+          el.removeAttribute('data-adm-editable');
+          el.style.cursor = '';
+          el.style.outline = '';
+          el.style.outlineOffset = '';
+          el.removeEventListener('click', admInlineTextClick, true);
+          // remove hover listeners (by cloning)
+          var clone = el.cloneNode(true);
+          el.parentNode.replaceChild(clone, el);
+        });
+        document.querySelectorAll('.adm-img-overlay, .adm-vid-overlay').forEach(function(ov) { ov.remove(); });
+        admRemoveCardOverlays();
+      }
 
       // --- FUNCIONES DE LOGIN (Asegúrate de que coincidan con tus IDs) ---
 
       function admOpenOverlay() {
         var el = document.getElementById('adminOverlay');
         if (el) {
-          el.style.display = 'flex'; // Forzamos visibilidad
-          el.classList.add('vis');
-          setTimeout(() => {
+          el.style.display = 'flex';
+          setTimeout(function() {
             var inp = document.getElementById('adminPassInput');
             if (inp) { inp.value = ''; inp.focus(); }
           }, 100);
@@ -10103,7 +9271,7 @@ nav ul li a:hover {
 
       function admCloseOverlay() {
         var el = document.getElementById('adminOverlay');
-        if (el) el.classList.remove('vis');
+        if (el) { el.classList.remove('vis'); el.style.display = 'none'; }
         var inp = document.getElementById('adminPassInput');
         if (inp) inp.value = '';
         var err = document.getElementById('adminErrMsg');
@@ -10116,17 +9284,25 @@ nav ul li a:hover {
 
         if (inp && inp.value.trim() === ADM_PASS) {
           admLoggedIn = true;
-          document.body.classList.add('adm-logged'); // Esto activa los estilos CSS de admin
-          if (document.getElementById('adminOverlay')) {
-            document.getElementById('adminOverlay').classList.remove('vis');
-            document.getElementById('adminOverlay').style.display = 'none';
-          }
-          admOpenPanel();
-          alert("Acceso concedido");
+          document.body.classList.add('adm-logged');
+          // Close overlay
+          var ov = document.getElementById('adminOverlay');
+          if (ov) { ov.classList.remove('vis'); ov.style.display = 'none'; }
+          // Activate inline editing mode
+          admShowEditBar();
+          admEnableInlineEditing();
+          admShowMenuAddBtns(true);
+          admEnableScheduleEdit();
+          // Update gear icon to show active state
+          var gear = document.getElementById('navGearBtn');
+          if (gear) { gear.style.opacity = '1'; gear.style.color = 'var(--gold)'; gear.title = 'Salir del modo admin'; }
+          // Spin gear animation
+          var gearIcon = document.getElementById('navGearIcon');
+          if (gearIcon) { gearIcon.style.transition = 'transform 0.5s'; gearIcon.style.transform = 'rotate(180deg)'; setTimeout(function(){ gearIcon.style.transform = 'rotate(360deg)'; }, 500); }
         } else {
           if (err) {
             err.textContent = 'Contraseña incorrecta';
-            setTimeout(() => err.textContent = '', 2000);
+            setTimeout(function() { err.textContent = ''; }, 2000);
           }
           if (inp) inp.value = '';
         }
@@ -10144,12 +9320,21 @@ nav ul li a:hover {
       }
       function admLogout() {
         admLoggedIn = false;
+        admHideEditBar();
+        admDisableInlineEditing();
         admClosePanel();
-        document.getElementById('adminBadge').classList.remove('vis');
         admShowMenuAddBtns(false);
         admDisableScheduleEdit();
         document.body.classList.remove('adm-logged');
-        document.querySelectorAll('.gal-edit-btn').forEach(b => b.style.display = 'none');
+        document.querySelectorAll('.gal-edit-btn').forEach(function(b) { b.style.display = 'none'; });
+        // Reset gear
+        var gear = document.getElementById('navGearBtn');
+        if (gear) { gear.style.opacity = '0.35'; gear.style.color = 'var(--muted)'; gear.title = 'Admin'; }
+        var gearIcon = document.getElementById('navGearIcon');
+        if (gearIcon) { gearIcon.style.transform = ''; }
+        // Also hide badge
+        var badge = document.getElementById('adminBadge');
+        if (badge) badge.style.display = 'none';
       }
 
       // ── Build card list in sidebar ──
@@ -10238,12 +9423,12 @@ nav ul li a:hover {
       function admOpenEdit(card) {
         admEditingCard = card;
         admNewImageData = null;
+        admEditingNov = false;
 
         const nameEl = card.querySelector('.card-name');
         const descEl = card.querySelector('.card-desc');
         const priceEl = card.querySelector('.card-price');
-        const imgEl = card.querySelector('.card-img-wrap img');
-        const imgPlaceholder = card.querySelector('.card-img-placeholder');
+        const imgEl = card.querySelector('.card-img') || card.querySelector('.card-img-wrap img');
 
         document.getElementById('editModalTitle').textContent = nameEl ? nameEl.textContent.trim() : 'Editar plato';
         document.getElementById('editName').value = nameEl ? nameEl.textContent.trim() : '';
@@ -10296,6 +9481,7 @@ nav ul li a:hover {
         document.getElementById('admImgFile').value = '';
         admEditingCard = null;
         admNewImageData = null;
+        admEditingNov = false;
       }
 
       function admToggleBadge(btn) {
@@ -10607,17 +9793,42 @@ nav ul li a:hover {
         grid.appendChild(card);
       }
       function admEditNov(card) {
-        // Reuse admin edit modal - populate with nov data
+        admEditingCard = card;
+        admEditingNov = true;
+        admNewImageData = null;
+
         document.getElementById('editName').value = card.querySelector('.nov-card-name').textContent.trim();
         document.getElementById('editDesc').value = card.querySelector('.nov-card-desc').textContent.trim();
         document.getElementById('editPrice').value = card.querySelector('.nov-card-price').textContent.trim();
-        admEditingCard = card;
-        admEditingNov = true;
         document.getElementById('editModalTitle').textContent = 'Editar novedad';
+
+        // Image preview
+        var preview = document.getElementById('admImgPreview');
+        var hint = document.getElementById('admImgHint');
+        var existingImg = card.querySelector('.nov-card-img');
+        if (existingImg) {
+          preview.src = existingImg.src;
+          preview.style.display = 'block';
+          hint.textContent = '📷 Haz clic para cambiar la imagen';
+        } else {
+          preview.style.display = 'none';
+          preview.src = '';
+          hint.textContent = '📷 Haz clic o arrastra una imagen aquí';
+        }
+
+        // Reset badges
+        document.querySelectorAll('.adm-badge-toggle').forEach(function(btn) {
+          btn.className = 'adm-badge-toggle';
+        });
+        // Reset allergens
+        document.querySelectorAll('.adm-allergen-item').forEach(function(item) {
+          item.classList.remove('checked');
+        });
+        // Reset file input
+        document.getElementById('admImgFile').value = '';
+
         document.getElementById('adminEditModal').classList.add('vis');
       }
-      let admEditingNov = false;
-      const _origSave = typeof admSaveCard !== 'undefined' ? admSaveCard : null;
       function admSaveCardOrNov() {
         if (admEditingNov && admEditingCard && admEditingCard.classList.contains('nov-card')) {
           admEditingCard.querySelector('.nov-card-name').textContent = document.getElementById('editName').value;
@@ -10633,6 +9844,7 @@ nav ul li a:hover {
           admCloseEdit();
         } else {
           admSaveCard();
+          
         }
       }
       function admDeleteNov(card) {
@@ -10820,28 +10032,6 @@ nav ul li a:hover {
         });
       }
 
-      function openReserveModal() {
-        const m = document.getElementById('reserveLocationModal');
-        m.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-      }
-      function closeReserveModal() {
-        document.getElementById('reserveLocationModal').style.display = 'none';
-        document.body.style.overflow = '';
-      }
-      function scrollToReservas() {
-        setTimeout(() => {
-          const el = document.getElementById('reservas');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-      }
-      // Close modal on backdrop click
-      document.addEventListener('click', function (e) {
-        const m = document.getElementById('reserveLocationModal');
-        if (m && e.target === m) closeReserveModal();
-      });
-
-
 
       // Novedades grid — adaptive columns (max 3)
       function updateNovGrid() {
@@ -10951,161 +10141,10 @@ nav ul li a:hover {
           row.addEventListener('dblclick', openOverlay);
         });
       })();
-
-
-
-      // Reserve modal iframe functions
-      var _reusMockUrl = 'https://www.google.com/maps/reserve/v/dine/c/dos1cO8wuTo?source=pa&opi=89978449&hl=es-ES';
-      var _cambrils_url = 'https://www.google.com/maps/reserve/v/dine/c/yCwiUoi-S3g?source=pa&opi=89978449&hl=es-ES';
-
-      function openReserveIframe(location) {
-        document.getElementById('resModalStep1').style.display = 'none';
-        var step2 = document.getElementById('resModalStep2');
-        if (!step1 || !step2) return;
-        step2.style.display = 'flex';
-        var isReus = location !== 'cambrils';
-        var url = isReus ? 'https://www.google.com/maps/reserve/v/dine/c/dos1cO8wuTo?source=pa&opi=89978449&hl=es-ES' : 'https://www.google.com/maps/reserve/v/dine/c/yCwiUoi-S3g?source=pa&opi=89978449&hl=es-ES';
-        var label = isReus ? 'RESERVAR EN REUS' : 'RESERVAR EN CAMBRILS';
-        var phone = isReus ? '608 17 78 65' : '654 32 39 87';
-        var h = document.getElementById('iframeTitle'); if (h) h.textContent = label;
-        var ft = document.getElementById('fallbackTitle'); if (ft) ft.textContent = label;
-        var fl = document.getElementById('fallbackLink'); if (fl) fl.href = url;
-        var fp = document.getElementById('fallbackPhone'); if (fp) fp.textContent = phone;
-        var iframe = document.getElementById('reserveIframeEl');
-        if (iframe) {
-          iframe.src = url;
-          // Detect if iframe was blocked (show fallback after 3s if no load event)
-          var timer = setTimeout(function () {
-            document.getElementById('iframeFallback').style.display = 'flex';
-          }, 4000);
-          iframe.onload = function () { clearTimeout(timer); };
-          iframe.onerror = function () {
-            clearTimeout(timer);
-            document.getElementById('iframeFallback').style.display = 'flex';
-          };
-        }
-      }
-      function showResStep1() {
-        document.getElementById('resModalStep2').style.display = 'none';
-        document.getElementById('resModalStep1').style.display = 'block';
-        document.getElementById('reserveIframe').src = '';
-      }
-      function updateIframeUrl(url) {
-        if (url && (url.startsWith('http://') || url.startsWith('https://'))) {
-          document.getElementById('reserveIframe').src = url;
-        }
-      }
-      // Override closeReserveModal to also reset iframe
-      var _origClose = window.closeReserveModal;
-      window.closeReserveModal = function () {
-        var m = document.getElementById('reserveLocationModal');
-        if (m) { m.style.display = 'none'; document.body.style.overflow = ''; }
-        document.getElementById('reserveIframe').src = '';
-        document.getElementById('resModalStep2').style.display = 'none';
-        document.getElementById('resModalStep1').style.display = 'block';
-      };
     </script>
-
-
-    <!-- RESERVE LOCATION MODAL -->
-    <div id="reserveLocationModal"
-      style="display:none;position:fixed;inset:0;z-index:10005;background:rgba(0,0,0,0.94);align-items:center;justify-content:center;">
-      <!-- Step 1: Choose location -->
-      <div id="resModalStep1"
-        style="max-width:520px;width:92%;background:#111;border:1px solid rgba(201,147,58,0.4);padding:3rem 2.5rem;position:relative;text-align:center;">
-        <button onclick="closeReserveModal()"
-          style="position:absolute;top:1rem;right:1rem;background:none;border:none;color:var(--muted);font-size:1.3rem;cursor:pointer;">✕</button>
-        <div
-          style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);">
-        </div>
-        <p style="font-size:1rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">
-          Elige tu restaurante</p>
-        <h3
-          style="font-family:'Bebas Neue',sans-serif;font-size:2.2rem;letter-spacing:4px;color:var(--white);margin-bottom:0.5rem;">
-          ¿Dónde reservas?</h3>
-        <p style="font-size:0.9rem;color:var(--muted);margin-bottom:2.5rem;">Selecciona la ubicación para continuar.
-        </p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;">
-          <!-- Reus -->
-          <button onclick="openReserveIframe('reus')"
-            style="display:flex;flex-direction:column;align-items:center;gap:0.8rem;padding:2rem 1.5rem;background:#0d0d0d;border:1px solid rgba(201,147,58,0.25);cursor:pointer;transition:all 0.2s;color:inherit;"
-            onmouseenter="this.style.borderColor='rgba(201,147,58,0.7)';this.style.background='rgba(201,147,58,0.05)'"
-            onmouseleave="this.style.borderColor='rgba(201,147,58,0.25)';this.style.background='#0d0d0d'">
-            <span style="font-size:2rem;">📍</span>
-            <div>
-              <div style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:3px;color:var(--white);">
-                REUS</div>
-              <div style="font-size:0.65rem;color:var(--muted);margin-top:0.2rem;">Carreró del Gas, 21</div>
-              <div style="font-size:0.65rem;color:var(--muted);">608 17 78 65</div>
-            </div>
-            <div
-              style="font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,147,58,0.4);padding:0.25rem 0.7rem;">
-              RESERVAR MESA →</div>
-          </button>
-          <!-- Cambrils -->
-          <a href="#" onclick="openReserveIframe('cambrils'); return false;"
-            style="display:flex;flex-direction:column;align-items:center;gap:0.8rem;padding:2rem 1.5rem;background:#0d0d0d;border:1px solid rgba(201,147,58,0.25);text-decoration:none;transition:all 0.2s;"
-            onmouseenter="this.style.borderColor='rgba(201,147,58,0.7)';this.style.background='rgba(201,147,58,0.05)'"
-            onmouseleave="this.style.borderColor='rgba(201,147,58,0.25)';this.style.background='#0d0d0d'">
-            <span style="font-size:2rem;">📍</span>
-            <div>
-              <div style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:3px;color:var(--white);">
-                CAMBRILS</div>
-              <div style="font-size:0.65rem;color:var(--muted);margin-top:0.2rem;">Pg. Sant Joan B. de la Salle, 3</div>
-              <div style="font-size:0.65rem;color:var(--muted);">654 32 39 87</div>
-            </div>
-            <div
-              style="font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,147,58,0.4);padding:0.25rem 0.7rem;">
-              RESERVAR MESA →</div>
-          </a>
-        </div>
-       
-      </div>
-
-      <!-- Step 2: Iframe reservation -->
-      <div <div <div id="resModalStep2"
-        style="display:none;width:96vw;max-width:920px;height:85vh;background:#0a0a0a;border:1px solid rgba(201,147,58,0.4);position:relative;flex-direction:column;overflow:hidden;">
-        <!-- Header -->
-        <div
-          style="display:flex;align-items:center;justify-content:space-between;padding:0.9rem 1.5rem;border-bottom:1px solid rgba(201,147,58,0.12);background:#070707;flex-shrink:0;">
-          <button onclick="showResStep1()"
-            style="background:none;border:none;color:rgba(201,147,58,0.7);cursor:pointer;font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;font-family:'DM Sans',sans-serif;padding:0;">&#8592;
-            Volver</button>
-          <div id="iframeTitle"
-            style="font-family:'Bebas Neue',sans-serif;font-size:0.95rem;letter-spacing:5px;color:var(--gold);">RESERVAR
-            EN REUS</div>
-          <button onclick="closeReserveModal()"
-            style="background:none;border:none;color:var(--muted);font-size:1.2rem;cursor:pointer;line-height:1;padding:0.2rem 0.4rem;">&#x2715;</button>
-        </div>
-        <!-- iframe attempt with fallback -->
-        <div style="position:relative;flex:1;overflow:hidden;">
-          <iframe id="reserveIframeEl"
-            src="https://www.google.com/maps/reserve/v/dine/c/dos1cO8wuTo?source=pa&opi=89978449&hl=es-ES"
-            style="width:100%;height:100%;border:none;display:block;" allow="payment" title="Kalavia Reservas">
-          </iframe>
-          <!-- Fallback shown if iframe blocked -->
-          <div id="iframeFallback"
-            style="display:none;position:absolute;inset:0;background:#0a0a0a;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;text-align:center;padding:2rem;">
-            <div style="font-size:2.5rem;">📅</div>
-            <div id="fallbackTitle"
-              style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:4px;color:var(--gold);">
-              RESERVAR EN REUS</div>
-            <p style="font-size:0.78rem;color:rgba(200,195,188,0.5);max-width:360px;line-height:1.8;">Google no permite
-              cargar la página de reservas en este contexto.<br>Ábrela directamente:</p>
-            <a id="fallbackLink"
-              href="https://www.google.com/maps/reserve/v/dine/c/dos1cO8wuTo?source=pa&opi=89978449&hl=es-ES"
-              target="_blank" rel="noopener"
-              style="display:inline-flex;align-items:center;gap:0.6rem;background:var(--gold);color:#000;padding:0.9rem 2rem;font-family:'DM Sans',sans-serif;font-weight:800;font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;text-decoration:none;">
-              Abrir Google Reserve &#8599;
-            </a>
-            <p style="font-size:0.6rem;color:rgba(136,136,136,0.4);letter-spacing:1.5px;text-transform:uppercase;">O
-              llama al <strong id="fallbackPhone" style="color:rgba(201,147,58,0.6);">608 17 78 65</strong></p>
-          </div>
-        </div>
-      </div>
       <!-- ══ ADMIN LOGIN OVERLAY ══ -->
       <div id="adminOverlay"
-        style="position:fixed;inset:0;z-index:10010;background:rgba(0,0,0,0.97);align-items:center;justify-content:center;">
+        style="display:none;position:fixed;inset:0;z-index:10010;background:rgba(0,0,0,0.97);align-items:center;justify-content:center;">
         <div class="adm-box">
           <div class="adm-title">⚙ ADMIN</div>
           <div class="adm-sub">Kalavia · Panel de gestión</div>
@@ -11133,8 +10172,7 @@ nav ul li a:hover {
       </div>
 
       <!-- Admin Edit Modal -->
-      <div id="adminEditModal"
-        style="display:none;position:fixed;inset:0;z-index:10008;background:rgba(0,0,0,0.92);align-items:center;justify-content:center;overflow-y:auto;">
+      <div id="adminEditModal">
         <div class="adm-edit-box">
           <div class="adm-edit-header">
             <span class="adm-edit-title" id="editModalTitle">Editar plato</span>
@@ -11213,53 +10251,9 @@ nav ul li a:hover {
               </div>
             </div>
             <div class="adm-btn-row">
-              <button class="adm-save-btn" onclick="admSaveEdit()">💾 Guardar cambios</button>
+              <button class="adm-save-btn" onclick="admSaveCardOrNov()">💾 Guardar cambios</button>
               <button class="adm-cancel-btn" onclick="admCloseEdit()">Cancelar</button>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Video Edit Modal -->
-      <div id="vidEditModal"
-        style="display:none;position:fixed;inset:0;z-index:10008;background:rgba(0,0,0,0.92);align-items:center;justify-content:center;">
-        <div style="background:#111;border:1px solid rgba(201,147,58,0.4);max-width:480px;width:92%;padding:1.5rem;">
-          <div
-            style="font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:4px;color:var(--gold);margin-bottom:1rem;"
-            data-i18n="vid_add">AÑADIR VÍDEO</div>
-          <div style="margin-bottom:0.9rem;">
-            <label
-              style="font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;color:rgba(201,147,58,0.7);display:block;margin-bottom:0.4rem;"
-              data-i18n="vid_url_label">URL del vídeo (YouTube / TikTok embed)</label>
-            <input type="text" id="vidUrlInput" placeholder="https://www.youtube.com/embed/..."
-              style="width:100%;background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);color:var(--white);padding:0.7rem 0.9rem;font-family:'DM Sans',sans-serif;font-size:0.85rem;outline:none;box-sizing:border-box;">
-          </div>
-          <div style="margin-bottom:0.9rem;">
-            <label
-              style="font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;color:rgba(201,147,58,0.7);display:block;margin-bottom:0.4rem;"
-              data-i18n="vid_title_label">Título / descripción</label>
-            <input type="text" id="vidTitleInput" placeholder="Reacción de cliente"
-              style="width:100%;background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);color:var(--white);padding:0.7rem 0.9rem;font-family:'DM Sans',sans-serif;font-size:0.85rem;outline:none;box-sizing:border-box;">
-          </div>
-          <div style="margin-bottom:1.2rem;">
-            <label
-              style="font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;color:rgba(201,147,58,0.7);display:block;margin-bottom:0.4rem;"
-              data-i18n="vid_source_label">Fuente</label>
-            <select id="vidSourceInput"
-              style="width:100%;background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);color:var(--white);padding:0.7rem 0.9rem;font-family:'DM Sans',sans-serif;font-size:0.85rem;outline:none;box-sizing:border-box;">
-              <option>📱 TikTok / Instagram</option>
-              <option>🎥 YouTube</option>
-              <option>📸 Reels</option>
-              <option>⭐ Reseña destacada</option>
-            </select>
-          </div>
-          <div style="display:flex;gap:0.6rem;">
-            <button onclick="admSaveVideoEdit()"
-              style="flex:1;background:var(--gold);color:#000;border:none;padding:0.8rem;font-family:'DM Sans',sans-serif;font-weight:800;font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;"
-              data-i18n="vid_save">💾 Guardar</button>
-            <button onclick="admCloseVideoEdit()"
-              style="background:transparent;border:1px solid rgba(255,255,255,0.12);color:var(--muted);padding:0.8rem 1.2rem;font-family:'DM Sans',sans-serif;font-size:0.7rem;letter-spacing:1px;text-transform:uppercase;cursor:pointer;"
-              data-i18n="vid_cancel">Cancelar</button>
           </div>
         </div>
       </div>
@@ -11268,8 +10262,6 @@ nav ul li a:hover {
       <button id="adminBadge" onclick="admOpenPanel()"
         style="display:none;position:fixed;bottom:1.5rem;left:1.5rem;z-index:9000;background:rgba(201,147,58,0.15);border:1px solid rgba(201,147,58,0.4);color:var(--gold);padding:0.5rem 1rem;font-family:'DM Sans',sans-serif;font-size:0.62rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">⚙
         Admin</button>
-
-
 
 
 </body>
